@@ -5,7 +5,7 @@ import typing
 
 from randovania.game_description.game_patches import GamePatches
 from randovania.game_description.node import Node, ResourceNode
-from randovania.game_description.requirements import ResourceRequirement, RequirementAnd
+from randovania.game_description.requirements import ResourceRequirement, RequirementAnd, RequirementOr
 from randovania.game_description.resources.resource_info import ResourceInfo
 from randovania.game_description.resources.resource_type import ResourceType
 from randovania.game_description.world_list import WorldList
@@ -38,6 +38,24 @@ class OptimizedWorldList:
         self.requirements_index = requirements_index
         self.adjacency = adjacency
 
+    def requirement_for(self, source: Node, target: Node) -> RequirementOr:
+        source_list = self.adjacency[self.all_nodes.index(source)]
+        target_index = self.all_nodes.index(target)
+
+        return RequirementOr([
+            RequirementAnd([self.requirements[req] for req in connection.requirements] + list(connection.damage))
+            for connection in source_list
+            if connection.other == target_index
+        ])
+
+    def potential_nodes_from(self, source: Node):
+        seen = set()
+        for connection in self.adjacency[self.all_nodes.index(source)]:
+            target = self.all_nodes[connection.other]
+            if target not in seen:
+                seen.add(target)
+                yield target, self.requirement_for(source, target)
+
 
 def optimize_world(world_list: WorldList, patches: GamePatches,
                    dangerous_resources: typing.FrozenSet[ResourceInfo]) -> OptimizedWorldList:
@@ -49,6 +67,7 @@ def optimize_world(world_list: WorldList, patches: GamePatches,
 
     for node in all_nodes:
         adjacency.append([])
+
         extra = [node.requirement_to_leave(patches, {})]
         if node.is_resource_node:
             node_resource = typing.cast(ResourceNode, node).resource()
