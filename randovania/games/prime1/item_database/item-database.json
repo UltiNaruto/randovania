@@ -65,6 +65,14 @@
             ],
             "is_major": false
         },
+        "ice_trap": {
+            "long_name": "Ice Traps",
+            "hint_details": [
+                "an ",
+                "Ice Trap"
+            ],
+            "is_major": false
+        },
         "missile_related": {
             "long_name": "Missile Related",
             "hint_details": [
@@ -565,6 +573,23 @@
             "probability_multiplier": 1,
             "extra": {},
             "original_index": 76
+        },
+        "Ice Trap": {
+            "item_category": "ice_trap",
+            "broad_category": "life_support",
+            "model_name": "Ice Trap",
+            "progression": [
+                "IceTrap"
+            ],
+            "default_shuffled_count": 0,
+            "default_starting_count": 0,
+            "ammo": [],
+            "unlocks_ammo": false,
+            "hide_from_gui": false,
+            "must_be_starting": false,
+            "probability_offset": 0,
+            "probability_multiplier": 1,
+            "extra": {}
         }
     },
     "ammo": {

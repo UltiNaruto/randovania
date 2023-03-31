@@ -12,8 +12,55 @@ from randovania.game_description.resources.pickup_index import PickupIndex
 from randovania.game_description.resources.resource_info import ResourceGainTuple
 from randovania.game_description.world.pickup_node import PickupNode
 from randovania.game_description.world.world_list import WorldList
+from randovania.games.game import RandovaniaGame
 from randovania.interface_common.players_configuration import PlayersConfiguration
 from randovania.layout.base.pickup_model import PickupModelStyle, PickupModelDataSource
+
+from randovania.gui.preset_settings.metroid_item_pool_tab import ICE_TRAP_SHOW_AS
+
+
+"""
+Link to the stackoverflow post : https://stackoverflow.com/questions/10492869/how-to-convert-words-to-leetspeak-with-python
+"""
+def _scramble_text(rng: Random, message: str):
+    """Convert english string to leetspeak"""
+    char_map = {
+        "a": ["4", "A"],
+        "b": ["I3", "8", "B"],
+        "c": ["C", "("],
+        "d": ["D"],
+        "e": ["3", "E"],
+        "f": ["F", "ph", "pH", "PH"],
+        "g": ["G"],
+        "h": ["H"],
+        "i": ["1", "I", "!", "|"],
+        "j": ["J"],
+        "k": ["K"],
+        "l": ["1", "L"],
+        "m": ["M"],
+        "n": ["N"],
+        "o": ["0", "O"],
+        "p": ["P"],
+        "q": ["Q"],
+        "r": ["R"],
+        "s": ["$", "5", "S"],
+        "t": ["7", "T"],
+        "u": ["U"],
+        "v": ["V"],
+        "w": ["W"],
+        "x": ["X"],
+        "y": ["Y"],
+        "z": ["2", "Z"],
+    }
+    leetspeak = ""
+    for char in message:
+        if char.lower() in char_map and rng.random() <= 0.30:  # 30% convert
+            possible_replacements = char_map[char.lower()]
+            leet_replacement = rng.choice(possible_replacements)
+            leetspeak = leetspeak + leet_replacement
+        else:
+            leetspeak = leetspeak + char
+    return leetspeak
 
 
 def _conditional_resources_for_pickup(pickup: PickupEntry) -> list[ConditionalResources]:
@@ -168,8 +215,10 @@ class PickupExporter:
 
 
 class PickupExporterSolo(PickupExporter):
-    def __init__(self, memo_data: dict[str, str]):
+    def __init__(self, rng: Random, memo_data: dict[str, str], player_config: PlayersConfiguration):
+        self.rng = rng
         self.memo_data = memo_data
+        self.player_config = player_config
 
     def create_details(self,
                        original_index: PickupIndex,
@@ -179,23 +228,52 @@ class PickupExporterSolo(PickupExporter):
                        name: str,
                        description: str,
                        model: PickupModel) -> ExportedPickupDetails:
+        game = self.player_config.player_games[0]
         pickup = pickup_target.pickup
+
+        scan_text = name
+        collection_text = _calculate_collection_text(pickup, visual_pickup, model_style, self.memo_data)
+        final_description = ""
+        final_model = model
+
+        if game == RandovaniaGame.METROID_PRIME:
+            ice_trap_show_as_val = ICE_TRAP_SHOW_AS[self.player_config.get_item_state_from_player(0, "Ice Trap").extra["show_as"]]
+            if pickup.name == "Ice Trap":
+                scan_text = "FOOL!"
+                collection_text = ["You're a FOOL!"]
+                if ice_trap_show_as_val != "Ice Trap":
+                    fake_pickups = [
+                        item_name for item_name, item_state in self.player_config.player_items_state[0].items()
+                        if item_state.num_shuffled_pickups > 0 and not item_name in ["Missile Launcher", "Ice Trap"]
+                    ]
+                    fake_pickup = fake_pickups[self.rng.randint(0, len(fake_pickups) - 1)]
+                    final_model = PickupModel(game, fake_pickup)
+                    if ice_trap_show_as_val == "Shuffled Model/Text":
+                        scan_text = f"{_scramble_text(self.rng, fake_pickup)}."
+                        if fake_pickup == "Missile Expansion" or fake_pickup == "Power Bomb Expansion":
+                            ammo_count, _ = self.player_config.get_ammo_state_from_player(0, fake_pickup.long_name).ammo_count
+                            fake_pickup_ammo = fake_pickup[:-10]
+                            if ammo_count > 1:
+                                fake_pickup_ammo += "s"
+                            final_description = f"Provides {ammo_count} {fake_pickup_ammo}."
+
         return ExportedPickupDetails(
             index=original_index,
-            name=name,
-            description=description,
-            collection_text=_calculate_collection_text(pickup, visual_pickup, model_style, self.memo_data),
+            name=scan_text,
+            description=final_description,
+            collection_text=collection_text,
             conditional_resources=_conditional_resources_for_pickup(pickup),
             conversion=list(pickup.convert_resources),
-            model=model,
+            model=final_model,
             other_player=False,
             original_pickup=pickup,
         )
 
 
 class PickupExporterMulti(PickupExporter):
-    def __init__(self, solo_creator: PickupExporter, multiworld_item: ItemResourceInfo,
+    def __init__(self, rng: Random, solo_creator: PickupExporter, multiworld_item: ItemResourceInfo,
                  players_config: PlayersConfiguration):
+        self.rng = rng
         self.solo_creator = solo_creator
         self.multiworld_item = multiworld_item
         self.players_config = players_config
@@ -213,24 +291,52 @@ class PickupExporterMulti(PickupExporter):
                                                        model_style, name, description, model)
             return dataclasses.replace(details, name=f"Your {details.name}")
         else:
+            other_game = self.players_config.player_games[pickup_target.player]
             other_name = self.players_config.player_names[pickup_target.player]
             if self.multiworld_item is not None:
                 resources = ((self.multiworld_item, original_index.index + 1),)
             else:
                 resources = tuple()
 
+            scan_text = f"{other_name}'s {name}"
+            collection_text = [f"Sent {name} to {other_name}!"]
+            final_description = ""
+            final_model = model
+
+            if other_game == RandovaniaGame.METROID_PRIME:
+                ice_trap_show_as_val = ICE_TRAP_SHOW_AS[self.players_config.get_item_state_from_player(pickup_target.player, "Ice Trap").extra["show_as"]]
+                if pickup_target.pickup.name == "Ice Trap":
+                    scan_text = "FOOL!"
+                    collection_text = ["You're a FOOL!"]
+                    if ice_trap_show_as_val != "Ice Trap":
+                        fake_pickups = [
+                            item_name for item_name, item_state in
+                            self.players_config.player_items_state[pickup_target.player].items()
+                            if item_state.num_shuffled_pickups > 0 and not item_name in ["Missile Launcher", "Ice Trap"]
+                        ]
+                        fake_pickup = fake_pickups[self.rng.randint(0, len(fake_pickups) - 1)]
+                        final_model = PickupModel(other_game, fake_pickup)
+                        if ice_trap_show_as_val == "Shuffled Model/Text":
+                            scan_text = f"{other_name}'s {_scramble_text(self.rng, fake_pickup)}"
+                            if fake_pickup in self.players_config.player_ammos_state[pickup_target.player].keys():
+                                ammo_count, _ = self.players_config.get_ammo_state_from_player(pickup_target.player, fake_pickup.long_name).ammo_count
+                                fake_pickup_ammo = fake_pickup[:-10]
+                                if ammo_count > 1:
+                                    fake_pickup_ammo += "s"
+                                final_description = f"Provides {ammo_count} {fake_pickup_ammo}.".strip()
+
             return ExportedPickupDetails(
                 index=original_index,
-                name=f"{other_name}'s {name}",
-                description=description,
-                collection_text=[f"Sent {name} to {other_name}!"],
+                name=scan_text,
+                description=final_description,
+                collection_text=collection_text,
                 conditional_resources=[ConditionalResources(
                     name=None,
                     item=None,
                     resources=resources,
                 )],
                 conversion=[],
-                model=model,
+                model=final_model,
                 other_player=True,
                 original_pickup=pickup_target.pickup,
             )
@@ -300,9 +406,9 @@ class GenericAcquiredMemo(dict):
         return f"{key} acquired!"
 
 
-def create_pickup_exporter(game: GameDescription, memo_data: dict, players_config: PlayersConfiguration):
-    exporter = PickupExporterSolo(memo_data)
+def create_pickup_exporter(rng: Random, game: GameDescription, memo_data: dict, players_config: PlayersConfiguration):
+    exporter = PickupExporterSolo(rng, memo_data, players_config)
     if players_config.is_multiworld:
-        exporter = PickupExporterMulti(exporter, game.resource_database.multiworld_magic_item,
+        exporter = PickupExporterMulti(rng, exporter, game.resource_database.multiworld_magic_item,
                                        players_config)
     return exporter

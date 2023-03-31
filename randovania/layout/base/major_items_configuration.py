@@ -145,6 +145,9 @@ class MajorItemsConfiguration(BitPackValue):
                 return item
         raise KeyError(name)
 
+    def get_item_state_with_name(self, name: str) -> MajorItemState:
+        return self.items_state[self.get_item_with_name(name)]
+
     def replace_state_for_item(self, item: MajorItem, state: MajorItemState) -> "MajorItemsConfiguration":
         return self.replace_states({
             item: state

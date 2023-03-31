@@ -169,9 +169,9 @@ class ConnectionBackend(ConnectionBase):
                     self.message_cooldown = 4.0
 
     async def _interact_with_game(self, dt):
-        has_pending_op, world = await self.connector.current_game_status(self.executor)
+        has_pending_op, world, is_in_cinematic = await self.connector.current_game_status(self.executor)
         self._world = world
-        if world is not None:
+        if world is not None and not is_in_cinematic:
             await self.update_current_inventory()
             if not has_pending_op:
                 self.message_cooldown = max(self.message_cooldown - dt, 0.0)

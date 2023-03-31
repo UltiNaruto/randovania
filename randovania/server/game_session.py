@@ -574,6 +574,9 @@ def game_session_admin_player(sio: ServerApp, session_id: int, user_id: int, act
         players_config = PlayersConfiguration(
             player_index=membership.row,
             player_names=player_names,
+            player_games={i: session.all_presets[i].game for i in range(session.num_rows)},
+            player_items_state={i: {item.name: item_state for item, item_state in session.all_presets[i].configuration.major_items_configuration.items_state.items()} for i in range(session.num_rows)},
+            player_ammos_state={i: {ammo.name: ammo_state for ammo, ammo_state in session.all_presets[i].configuration.ammo_configuration.items_state.items()} for i in range(session.num_rows)},
         )
         preset = layout_description.get_preset(players_config.player_index)
         cosmetic_patches = preset.game.data.layout.cosmetic_patches.from_json(arg)

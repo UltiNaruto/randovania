@@ -15,7 +15,14 @@ async def patcher_data_command_logic_async(args):
     layout_description = LayoutDescription.from_file(args.log_file)
     players_config = PlayersConfiguration(args.player_index,
                                           {i: f"Player {i + 1}"
-                                           for i in range(layout_description.player_count)})
+                                           for i in range(layout_description.player_count)},
+                                          {i: layout_description.get_preset(i).game
+                                           for i in range(layout_description.player_count)},
+                                          {i: {item.name: item_state for item, item_state in layout_description.get_preset(i).configuration.major_items_configuration.items_state.items()}
+                                           for i in range(layout_description.player_count)},
+                                          {i: {ammo.name: ammo_state for ammo, ammo_state in layout_description.get_preset(i).configuration.ammo_configuration.items_state.items()}
+                                           for i in range(layout_description.player_count)}
+                                          )
     preset = layout_description.get_preset(players_config.player_index)
 
     cosmetic_patches = preset.game.data.layout.cosmetic_patches.default()

@@ -111,6 +111,9 @@ class GameDetailsWindow(CloseEventWidget, Ui_GameDetailsWindow, BackgroundTaskMi
         return PlayersConfiguration(
             player_index=self.current_player_index,
             player_names=self._player_names,
+            player_games={i: self.layout_description.all_presets[i].game for i in range(len(self._player_names))},
+            player_items_state={i: {item.name: item_state for item, item_state in self.layout_description.all_presets[i].configuration.major_items_configuration.items_state.items()} for i in range(len(self._player_names))},
+            player_ammos_state={i: {item.name: item_state for item, item_state in self.layout_description.all_presets[i].configuration.ammo_configuration.items_state.items()} for i in range(len(self._player_names))},
         )
 
     # Operations

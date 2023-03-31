@@ -744,6 +744,8 @@ def _migrate_v44(preset: dict) -> dict:
 def _migrate_v45(preset: dict) -> dict:
     if preset["game"] == "prime2":
         preset["configuration"]["portal_rando"] = False
+    if preset["game"] == "prime1":
+        preset["configuration"]["major_items_configuration"]["items_state"] |= ({"Ice Trap": {"num_shuffled_pickups": 0, "extra": {"show_as": 0}}})
     return preset
 
 

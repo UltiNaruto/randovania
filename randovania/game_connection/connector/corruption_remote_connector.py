@@ -39,7 +39,7 @@ class CorruptionRemoteConnector(PrimeRemoteConnector):
     def _asset_id_format(self):
         return ">Q"
 
-    async def current_game_status(self, executor: MemoryOperationExecutor) -> tuple[bool, World | None]:
+    async def current_game_status(self, executor: MemoryOperationExecutor) -> tuple[bool, World | None, bool]:
         """
         Fetches the world the player's currently at, or None if they're not in-game.
         :param executor:
@@ -70,7 +70,8 @@ class CorruptionRemoteConnector(PrimeRemoteConnector):
 
         pending_op_byte = results[memory_ops[1]]
         has_pending_op = pending_op_byte != b"\x00"
-        return has_pending_op, self._current_status_world(results.get(memory_ops[0]), player_vtable)
+        # TODO: find a way to check the number of cameras to check if we are in a cutscene
+        return has_pending_op, self._current_status_world(results.get(memory_ops[0]), player_vtable), False
 
     async def _memory_op_for_items(self, executor: MemoryOperationExecutor, items: list[ItemResourceInfo],
                                    ) -> list[MemoryOperation]:

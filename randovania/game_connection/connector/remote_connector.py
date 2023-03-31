@@ -26,7 +26,7 @@ class RemoteConnector:
         """Returns True if the accessible memory matches the version of this connector."""
         raise NotImplementedError()
 
-    async def current_game_status(self, executor: MemoryOperationExecutor) -> tuple[bool, World | None]:
+    async def current_game_status(self, executor: MemoryOperationExecutor) -> tuple[bool, World | None, bool]:
         """
         Fetches the world the player's currently at, or None if they're not in-game.
         :param executor:

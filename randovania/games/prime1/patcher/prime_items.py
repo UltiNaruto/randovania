@@ -18,3 +18,5 @@ ARTIFACT_ITEMS = [
 ]
 ARTIFACT_NAMES = ["Artifact of " + item for item in ARTIFACT_ITEMS]
 ARTIFACT_MODEL = list(ARTIFACT_NAMES)
+
+ICE_TRAP = "IceTrap"

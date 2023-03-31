@@ -704,7 +704,7 @@ def _create_pickup_list(cosmetic_patches: EchoesCosmeticPatches, configuration: 
         rng,
         configuration.pickup_model_style,
         configuration.pickup_model_data_source,
-        exporter=pickup_exporter.create_pickup_exporter(game, memo_data, players_config),
+        exporter=pickup_exporter.create_pickup_exporter(rng, game, memo_data, players_config),
         visual_etm=pickup_creator.create_visual_etm(),
     )
 

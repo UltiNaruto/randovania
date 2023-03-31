@@ -1,4 +1,5 @@
 from randovania.dol_patching.assembler import ppc
+import struct
 
 
 class CompositeInstruction(ppc.BaseInstruction):
@@ -46,3 +47,11 @@ def load_unsigned_32bit(output_register: ppc.GeneralRegister, value: int) -> Com
 
 def load_current_address(output_register: ppc.GeneralRegister, instruction_offset: int = 0):
     return CurrentAddressInstruction(output_register, instruction_offset * 4)
+
+
+def int32(value: int) -> ppc.Instruction:
+    return ppc.Instruction(value)
+
+
+def float32(value: float) -> ppc.Instruction:
+    return ppc.Instruction(struct.unpack('<I', struct.pack('<f', value))[0])

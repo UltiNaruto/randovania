@@ -5,7 +5,8 @@ from PySide6 import QtWidgets
 from randovania.game_description import default_database
 from randovania.game_description.game_description import GameDescription
 from randovania.game_description.resources.item_resource_info import ItemResourceInfo
-from randovania.gui.lib.scroll_protected import ScrollProtectedSpinBox
+from randovania.games.game import RandovaniaGame
+from randovania.gui.lib.scroll_protected import ScrollProtectedComboBox, ScrollProtectedSpinBox
 from randovania.gui.lib.window_manager import WindowManager
 from randovania.gui.preset_settings.item_pool_tab import PresetItemPool
 from randovania.gui.preset_settings.pickup_style_widget import PickupStyleWidget
@@ -13,6 +14,11 @@ from randovania.interface_common.preset_editor import PresetEditor
 from randovania.layout.base.major_item_state import DEFAULT_MAXIMUM_SHUFFLED
 from randovania.layout.preset import Preset
 
+ICE_TRAP_SHOW_AS = [
+    "Ice Trap",
+    "Shuffled Model",
+    "Shuffled Model/Text"
+]
 
 class MetroidPresetItemPool(PresetItemPool):
     def __init__(self, editor: PresetEditor, game_description: GameDescription, window_manager: WindowManager):
@@ -25,6 +31,10 @@ class MetroidPresetItemPool(PresetItemPool):
         self._create_energy_tank_box(game_description.resource_database.energy_tank)
         self._create_pickup_style_box(size_policy)
 
+        if self.game == RandovaniaGame.METROID_PRIME:
+            self._ice_trap_item = item_database.major_items["Ice Trap"]
+            self._create_ice_trap_box()
+
     def on_preset_changed(self, preset: Preset):
         super().on_preset_changed(preset)
         layout = preset.configuration
@@ -36,6 +46,14 @@ class MetroidPresetItemPool(PresetItemPool):
         energy_tank_state = major_configuration.items_state[self._energy_tank_item]
         self.energy_tank_starting_spinbox.setValue(energy_tank_state.num_included_in_starting_items)
         self.energy_tank_shuffled_spinbox.setValue(energy_tank_state.num_shuffled_pickups)
+
+        if self.game == RandovaniaGame.METROID_PRIME:
+            # Ice Trap
+            ice_trap_state = major_configuration.items_state[self._ice_trap_item]
+            show_as = 0 if ice_trap_state.extra == None else ice_trap_state.extra["show_as"]
+            self.ice_trap_show_as_combobox.setCurrentIndex(show_as)
+            self.ice_trap_shuffled_spinbox.setValue(ice_trap_state.num_shuffled_pickups)
+
 
     def _create_pickup_style_box(self, size_policy):
         self.pickup_style_widget = PickupStyleWidget(None, self._editor)
@@ -78,5 +96,44 @@ class MetroidPresetItemPool(PresetItemPool):
             options.major_items_configuration = major_configuration.replace_state_for_item(
                 self._energy_tank_item,
                 dataclasses.replace(major_configuration.items_state[self._energy_tank_item],
+                                    num_shuffled_pickups=value)
+            )
+
+    def _create_ice_trap_box(self):
+        category_box, category_layout, _ = self._boxes_for_category["ice_trap"]
+
+        show_as_label = QtWidgets.QLabel(category_box)
+        show_as_label.setText("Show As")
+        category_layout.addWidget(show_as_label, 0, 0)
+
+        self.ice_trap_show_as_combobox = ScrollProtectedComboBox(category_box)
+        self.ice_trap_show_as_combobox.addItems(ICE_TRAP_SHOW_AS)
+        self.ice_trap_show_as_combobox.currentTextChanged.connect(self._on_update_show_as_ice_trap)
+        category_layout.addWidget(self.ice_trap_show_as_combobox, 0, 1)
+
+        shuffled_label = QtWidgets.QLabel(category_box)
+        shuffled_label.setText("Shuffled Quantity")
+        category_layout.addWidget(shuffled_label, 1, 0)
+
+        self.ice_trap_shuffled_spinbox = ScrollProtectedSpinBox(category_box)
+        self.ice_trap_shuffled_spinbox.setMaximum(DEFAULT_MAXIMUM_SHUFFLED[-1])
+        self.ice_trap_shuffled_spinbox.valueChanged.connect(self._on_update_shuffled_ice_trap)
+        category_layout.addWidget(self.ice_trap_shuffled_spinbox, 1, 1)
+
+    def _on_update_show_as_ice_trap(self, value: str):
+        with self._editor as options:
+            major_configuration = options.major_items_configuration
+            options.major_items_configuration = major_configuration.replace_state_for_item(
+                self._ice_trap_item,
+                dataclasses.replace(major_configuration.items_state[self._ice_trap_item],
+                                    extra={"show_as": ICE_TRAP_SHOW_AS.index(value)})
+            )
+
+    def _on_update_shuffled_ice_trap(self, value: int):
+        with self._editor as options:
+            major_configuration = options.major_items_configuration
+            options.major_items_configuration = major_configuration.replace_state_for_item(
+                self._ice_trap_item,
+                dataclasses.replace(major_configuration.items_state[self._ice_trap_item],
                                     num_shuffled_pickups=value)
             )

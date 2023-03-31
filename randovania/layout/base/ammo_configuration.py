@@ -64,6 +64,12 @@ class AmmoConfiguration(bitpacking.BitPackValue):
             },
         )
 
+    def get_ammo_state_with_name(self, name: str) -> AmmoState:
+        for ammo, ammo_state in self.items_state:
+            if ammo.name == name:
+                return ammo_state
+        raise KeyError(name)
+
     def replace_state_for_ammo(self, ammo: Ammo, state: AmmoState) -> "AmmoConfiguration":
         return self.replace_states({ammo: state})
 

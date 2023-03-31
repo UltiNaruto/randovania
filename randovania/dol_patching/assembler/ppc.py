@@ -15,6 +15,11 @@ class Register:
     number: int
 
 
+class ConditionalRegister(Register):
+    def __repr__(self):
+        return f"cr{self.number}"
+
+
 class GeneralRegister(Register):
     def __repr__(self):
         return f"r{self.number}"
@@ -166,6 +171,43 @@ f0 = FloatRegister(0)
 f1 = FloatRegister(1)
 f2 = FloatRegister(2)
 f3 = FloatRegister(3)
+f4 = FloatRegister(4)
+f5 = FloatRegister(5)
+f6 = FloatRegister(6)
+f7 = FloatRegister(7)
+f8 = FloatRegister(8)
+f9 = FloatRegister(9)
+f10 = FloatRegister(10)
+f11 = FloatRegister(11)
+f12 = FloatRegister(12)
+f13 = FloatRegister(13)
+f14 = FloatRegister(14)
+f15 = FloatRegister(15)
+f16 = FloatRegister(16)
+f17 = FloatRegister(17)
+f18 = FloatRegister(18)
+f19 = FloatRegister(19)
+f20 = FloatRegister(20)
+f21 = FloatRegister(21)
+f22 = FloatRegister(22)
+f23 = FloatRegister(23)
+f24 = FloatRegister(24)
+f25 = FloatRegister(25)
+f26 = FloatRegister(26)
+f27 = FloatRegister(27)
+f28 = FloatRegister(28)
+f29 = FloatRegister(29)
+f30 = FloatRegister(30)
+f31 = FloatRegister(31)
+
+cr0 = ConditionalRegister(0)
+cr1 = ConditionalRegister(1)
+cr2 = ConditionalRegister(2)
+cr3 = ConditionalRegister(3)
+cr4 = ConditionalRegister(4)
+cr5 = ConditionalRegister(5)
+cr6 = ConditionalRegister(6)
+cr7 = ConditionalRegister(7)
 
 # Special Registers
 LR = 8
@@ -327,6 +369,18 @@ def cmpw(bf, ra, rb):
     return cmp(bf, 0, ra, rb)
 
 
+def fcmpu(conditional_register: ConditionalRegister, input_register_a: FloatRegister, input_register_b: FloatRegister):
+    """
+    conditional_register => input_register_b - input_register_a
+    """
+    return Instruction.compose(((63, 6, False),
+                                (conditional_register.number, 3, False),
+                                (0, 2, False),
+                                (input_register_a.number, 5, False),
+                                (input_register_b.number, 5, False),
+                                (0, 11, False)))
+
+
 def _jump_to_relative_address(address_or_symbol: JumpTarget, *, relative: bool, link: bool):
     def with_inc_address(address: int, instruction_address: int):
         jump_offset = (address - instruction_address) // 4
@@ -398,19 +452,28 @@ def beq(address_or_symbol: JumpTarget, relative: bool = False):
 
 def bge(address_or_symbol: JumpTarget, relative: bool = False):
     """
-    jumps to the given address, if last comparison was a successful equality
+    jumps to the given address, if last comparison was greater or equal
     """
     bo = 4  # Branch if condition false (BO=4)
     bi = 0  # condition: less than
     return _conditional_branch(bo, bi, address_or_symbol, relative=relative)
 
 
+def bgt(address_or_symbol: JumpTarget, relative: bool = False):
+    """
+    jumps to the given address, if last comparison was greater
+    """
+    bo = 12  # Branch if condition true (BO=12)
+    bi = 1  # condition: greater than
+    return _conditional_branch(bo, bi, address_or_symbol, relative=relative)
+
+
 def bne(address_or_symbol: JumpTarget, relative: bool = False):
     """
-    jumps to the given address, if last comparison was a successful equality
+    jumps to the given address, if last comparison was not a successful equality
     """
     bo = 4  # Branch if condition false (BO=4)
-    bi = 2  # condition: equals
+    bi = 2  # condition: not equals
     return _conditional_branch(bo, bi, address_or_symbol, relative=relative)
 
 
@@ -524,6 +587,38 @@ def addis(output_register: GeneralRegister, input_register: GeneralRegister, lit
                                 (output_register.number, 5, False),
                                 (input_register.number, 5, False),
                                 (literal, 16, False)))
+
+
+def andis(output_register: GeneralRegister, input_register: GeneralRegister, literal: int):
+    """
+    output_register = input_register & literal
+    """
+    return Instruction.compose(((29, 6, False),
+                                (output_register.number, 5, False),
+                                (input_register.number, 5, False),
+                                (literal, 16, False)))
+
+
+def fadds(output_register: FloatRegister, input_register_a: FloatRegister, input_register_b: FloatRegister):
+    """
+    output_register = input_register_a + input_register_b
+    """
+    return Instruction.compose(((59, 6, False),
+                                (output_register.number, 5, False),
+                                (input_register_a.number, 5, False),
+                                (input_register_b.number, 5, False),
+                                (42, 11, False)))
+
+
+def fsubs(output_register: FloatRegister, input_register_a: FloatRegister, input_register_b: FloatRegister):
+    """
+    output_register = input_register_a + input_register_b
+    """
+    return Instruction.compose(((59, 6, False),
+                                (output_register.number, 5, False),
+                                (input_register_a.number, 5, False),
+                                (input_register_b.number, 5, False),
+                                (40, 11, False)))
 
 
 def _special_register_op(input_register: Register, special_register: int, magic_value: int, op_code: int):

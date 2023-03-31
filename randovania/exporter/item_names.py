@@ -11,7 +11,9 @@ _RESOURCE_NAME_TRANSLATION = {
     'Temporary Missile': 'Missile',
     'Temporary Power Bomb': 'Power Bomb',
 }
+
 _ITEMS_TO_PLURALIZE = {
+    "Ice Trap",
     "Missile",
     "Missile Expansion",
     "Missile Tank",

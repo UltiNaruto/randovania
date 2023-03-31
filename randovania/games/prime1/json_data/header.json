@@ -290,6 +290,13 @@
                     "item_id": 40
                 }
             },
+            "IceTrap": {
+                "long_name": "Ice Trap",
+                "max_capacity": 65536,
+                "extra": {
+                    "item_id": -2
+                }
+            },
             "Nothing": {
                 "long_name": "Nothing",
                 "max_capacity": 1,

@@ -39,7 +39,7 @@ class EchoesRemoteConnector(PrimeRemoteConnector):
     def _asset_id_format(self):
         return ">I"
 
-    async def current_game_status(self, executor: MemoryOperationExecutor) -> tuple[bool, World | None]:
+    async def current_game_status(self, executor: MemoryOperationExecutor) -> tuple[bool, World | None, bool]:
         """
         Fetches the world the player's currently at, or None if they're not in-game.
         :param executor:
@@ -51,18 +51,20 @@ class EchoesRemoteConnector(PrimeRemoteConnector):
         asset_id_size = struct.calcsize(self._asset_id_format())
         mlvl_offset = 4
         cplayer_offset = 0x14fc
+        cameras_vector_offset = 0x16fc
 
         memory_ops = [
             MemoryOperation(self.version.game_state_pointer, offset=mlvl_offset, read_byte_count=asset_id_size),
             MemoryOperation(cstate_manager_global + 0x2, read_byte_count=1),
             MemoryOperation(cstate_manager_global + cplayer_offset, offset=0, read_byte_count=4),
+            MemoryOperation(cstate_manager_global + cameras_vector_offset, read_byte_count=4),
         ]
         results = await executor.perform_memory_operations(memory_ops)
 
         pending_op_byte = results[memory_ops[1]]
         has_pending_op = pending_op_byte != b"\x00"
-        return has_pending_op, self._current_status_world(results.get(memory_ops[0]),
-                                                          results.get(memory_ops[2]))
+        is_in_cinematic = struct.unpack(">I", results.get(memory_ops[3]))[0] > 0 if results.get(memory_ops[3]) is not None else False
+        return has_pending_op, self._current_status_world(results.get(memory_ops[0]), results.get(memory_ops[2])), is_in_cinematic
 
     async def _memory_op_for_items(self, executor: MemoryOperationExecutor, items: list[ItemResourceInfo],
                                    ) -> list[MemoryOperation]:

@@ -144,6 +144,20 @@ def call_display_hud_patch(patch_addresses: StringDisplayPatchAddresses) -> list
     ]
 
 
+def _load_player(game: RandovaniaGame, target_register: GeneralRegister, state_mgr: GeneralRegister = r31):
+    if game == RandovaniaGame.METROID_PRIME:
+        return [
+            lwz(target_register, 0x84c, state_mgr),
+        ]
+    elif game == RandovaniaGame.METROID_PRIME_ECHOES:
+        return [
+            lwz(target_register, 0x14fc, state_mgr),
+            lwz(target_register, 0, target_register),
+        ]
+    else:
+        raise ValueError(f"Unsupported game {game}")
+
+
 def _load_player_state(game: RandovaniaGame, target_register: GeneralRegister, state_mgr: GeneralRegister = r31):
     if game == RandovaniaGame.METROID_PRIME:
         return [

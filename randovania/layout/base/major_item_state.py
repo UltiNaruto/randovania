@@ -47,6 +47,7 @@ class MajorItemState:
     num_included_in_starting_items: int = 0
     priority: float = 1.0
     included_ammo: tuple[int, ...] = tuple()
+    extra: dict[str, _] = None
 
     def check_consistency(self, item: MajorItem):
         db = default_database.resource_database_for(item.game)

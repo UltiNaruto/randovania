@@ -4,7 +4,8 @@ import py_randomprime
 
 from randovania.dol_patching import assembler
 from randovania.dol_patching.assembler import custom_ppc
-from randovania.dol_patching.assembler.ppc import lwz, r3, r13, bl, r31, r4, r5, cmpw, beq, li, stw, r1, addi, r6
+from randovania.dol_patching.assembler.ppc import addi, andis, b, beq, bgt, bl, cmpw, fcmpu, fsubs, lfs, li, lis, lwz, or_, stfs, stw, \
+                                                  cr0, f1, f2, f14, r1, r3, r4, r5, r6, r7, r13, r31
 from randovania.games.game import RandovaniaGame
 from randovania.patching.prime.all_prime_dol_patches import BasePrimeDolVersion, StringDisplayPatchAddresses, \
     PowerupFunctionsAddresses
@@ -45,6 +46,7 @@ class Prime1DolVersion(BasePrimeDolVersion):
         )
         object.__setattr__(self, "state_for_world", symbols["StateForWorld__10CGameStateFUi"])
         object.__setattr__(self, "set_layer_active", symbols["SetLayerActive__16CWorldLayerStateFiib"])
+        object.__setattr__(self, "freeze", symbols["Freeze__7CPlayerFR13CStateManagerUiUsUi"])
 
 
 def set_artifact_layer_active_patch(addresses: Prime1DolVersion, layer_id: int, active: bool,
@@ -92,3 +94,37 @@ def set_artifact_layer_active_patch(addresses: Prime1DolVersion, layer_id: int, 
     ])
 
     return result
+
+
+def freeze_player(addresses: Prime1DolVersion) -> list[assembler.BaseInstruction]:
+    return [
+        lwz(r3, 0x84c, r31),  # player = manager->players[0]
+        or_(r4, r31, r31),     # get mgr
+        custom_ppc.load_unsigned_32bit(r5, 0x6fc03d46), # steamTextureId (0x6fc03d46)
+        li(r6, 0xc34),  # sfxId = 0xc34
+        custom_ppc.load_unsigned_32bit(r7, 0x2b757945),  # iceTextureId (0x2b757945)
+        bl(addresses.freeze),
+    ]
+
+
+def damage_player(addresses: Prime1DolVersion, value: float) -> list[assembler.BaseInstruction]:
+    return [
+        # store current address to get static datas later
+        custom_ppc.load_current_address(r4),
+        # static datas
+        b(0x8, relative=True),
+        custom_ppc.float32(value),
+
+        # actual function
+        lfs(f1, 0xc, r4),
+        lwz(r3, 0x8b8, r31),
+        lwz(r3, 0, r3),
+        lfs(f2, 0xc, r3),
+        fsubs(f2, f2, f1),
+        stfs(f2, 0xc, r3),
+        fcmpu(cr0, f2, f14),
+        bgt(0x10, relative=True),
+        lwz(r4, 0x0, r3),
+        andis(r4, r4, 0x7fff),
+        stw(r4, 0x0, r3),
+    ]

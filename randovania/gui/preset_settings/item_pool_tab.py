@@ -255,7 +255,7 @@ class PresetItemPool(PresetTab, Ui_PresetItemPool):
 
     def _create_major_item_boxes(self, item_database: ItemDatabase, resource_database: ResourceDatabase):
         for major_item in item_database.major_items.values():
-            if major_item.hide_from_gui or major_item.item_category.name == "energy_tank":
+            if major_item.hide_from_gui or major_item.item_category.name == "energy_tank" or major_item.item_category.name == "ice_trap":
                 continue
 
             category_box, category_layout, elements = self._boxes_for_category[major_item.item_category.name]
