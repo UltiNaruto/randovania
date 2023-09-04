@@ -103,7 +103,8 @@
             "offworld_models": {
                 "prime1": "Morph Ball Bomb",
                 "prime2": "MorphBallBomb",
-                "dread": "powerup_bomb"
+                "dread": "powerup_bomb",
+                "metroid": "spr_ITEM_Bomb"
             },
             "progression": [
                 "Bombs"
@@ -117,7 +118,9 @@
             "pickup_category": "movement",
             "broad_category": "movement",
             "model_name": "sItemPowergrip",
-            "offworld_models": {},
+            "offworld_models": {
+                "metroid": "spr_ITEM_Power_Grip"
+            },
             "progression": [
                 "Power Grip"
             ],
@@ -146,7 +149,9 @@
             "pickup_category": "morph_ball",
             "broad_category": "movement",
             "model_name": "sItemJumpBall",
-            "offworld_models": {},
+            "offworld_models": {
+                "metroid": "spr_ITEM_Spring_Ball"
+            },
             "progression": [
                 "Spring Ball"
             ],
@@ -161,7 +166,8 @@
             "model_name": "sItemScrewAttack",
             "offworld_models": {
                 "prime2": "ScrewAttack",
-                "dread": "powerup_screwattack"
+                "dread": "powerup_screwattack",
+                "metroid": "spr_ITEM_Screw_Attack"
             },
             "progression": [
                 "Screw Attack"
@@ -178,7 +184,8 @@
             "offworld_models": {
                 "prime1": "Varia Suit",
                 "prime2": "VariaSuit INCOMPLETE",
-                "dread": "powerup_variasuit"
+                "dread": "powerup_variasuit",
+                "metroid": "spr_ITEM_Varia"
             },
             "progression": [
                 "Varia Suit"
@@ -195,7 +202,8 @@
             "offworld_models": {
                 "prime1": "Space Jump Boots",
                 "prime2": "SpaceJumpBoots",
-                "dread": "powerup_spacejump"
+                "dread": "powerup_spacejump",
+                "metroid": "spr_ITEM_Space_Jump"
             },
             "progression": [
                 "Space Jump"
@@ -212,7 +220,8 @@
             "offworld_models": {
                 "prime1": "Boost Ball",
                 "prime2": "BoostBall",
-                "dread": "powerup_speedbooster"
+                "dread": "powerup_speedbooster",
+                "metroid": "spr_ITEM_Speed_Booster"
             },
             "progression": [
                 "Speed Booster"
@@ -229,7 +238,8 @@
             "offworld_models": {
                 "prime1": "Space Jump Boots",
                 "prime2": "SpaceJumpBoots",
-                "dread": "powerup_doublejump"
+                "dread": "powerup_doublejump",
+                "metroid": "spr_ITEM_Jump_Boots"
             },
             "progression": [
                 "Hi-Jump"
@@ -313,7 +323,8 @@
             "model_name": "sItemIceBeam",
             "offworld_models": {
                 "prime1": "Ice Beam",
-                "dread": "powerup_icemissile"
+                "dread": "powerup_icemissile",
+                "metroid": "spr_ITEM_Ice_Beam"
             },
             "progression": [
                 "Ice Beam"
@@ -329,7 +340,8 @@
             "model_name": "sItemWaveBeam",
             "offworld_models": {
                 "prime1": "Wave Beam",
-                "dread": "powerup_wavebeam"
+                "dread": "powerup_wavebeam",
+                "metroid": "spr_ITEM_Wave_Beam"
             },
             "progression": [
                 "Wave Beam"
@@ -345,7 +357,8 @@
             "model_name": "sItemSpazerBeam",
             "offworld_models": {
                 "prime1": "Power Beam",
-                "dread": "powerup_widebeam"
+                "dread": "powerup_widebeam",
+                "metroid": "spr_ITEM_Spazer_Beam"
             },
             "progression": [
                 "Spazer Beam"
@@ -377,7 +390,8 @@
             "model_name": "sItemMorphBall",
             "offworld_models": {
                 "prime1": "Morph Ball",
-                "dread": "powerup_morphball"
+                "dread": "powerup_morphball",
+                "metroid": "spr_ITEM_Morph"
             },
             "progression": [
                 "Morph Ball"
@@ -393,7 +407,8 @@
             "offworld_models": {
                 "prime1": "Missile",
                 "prime2": "MissileLauncher",
-                "dread": "powerup_icemissile"
+                "dread": "powerup_icemissile",
+                "metroid": "spr_ITEM_Missile"
             },
             "progression": [
                 "Missile Launcher"
@@ -411,6 +426,7 @@
             "broad_category": "missile_related",
             "model_name": "sItemSMissileLauncher",
             "offworld_models": {
+                "metroid": "spr_ITEM_Super_Missile",
                 "prime1": "Super Missile",
                 "prime2": "SuperMissile",
                 "dread": "powerup_supermissile"
@@ -455,7 +471,8 @@
             "offworld_models": {
                 "prime1": "Energy Tank",
                 "prime2": "EnergyTank",
-                "dread": "item_energytank"
+                "dread": "item_energytank",
+                "metroid": "spr_ITEM_Energy_Tank"
             },
             "progression": [
                 "Energy Tank"
@@ -472,7 +489,8 @@
             "offworld_models": {
                 "prime1": "Missile",
                 "prime2": "MissileExpansion",
-                "dread": "item_missiletank"
+                "dread": "item_missiletank",
+                "metroid": "spr_ITEM_Missile"
             },
             "items": [
                 "Missiles"
@@ -486,6 +504,7 @@
             "broad_category": "missile_related",
             "model_name": "sItemSuperMissile",
             "offworld_models": {
+                "metroid": "spr_ITEM_Super_Missile",
                 "prime1": "Missile",
                 "prime2": "MissileExpansionLarge",
                 "dread": "item_missiletankplus"
