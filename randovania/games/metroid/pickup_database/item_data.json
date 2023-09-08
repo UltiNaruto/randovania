@@ -1,0 +1,58 @@
+{
+	"Missile Tank": {
+		"text_desc": "Missile capacity {MissilesChanged} by {Missiles}",
+		"text_header": "Got Missile Tank"
+	},
+	"Locked Missile Tank": {
+		"text_desc": "Missile capacity {Locked MissilesChanged} by {Locked Missiles} - Launcher still required",
+		"text_header": "Got Locked Missile Tank"
+	},
+	"Energy Tank": {
+		"text_desc": "Energy capacity increased by {Energy}",
+		"text_header": "Got Energy Tank"
+	},
+	"Missile Launcher": {
+		"text_desc": "Missiles can now be fired. Missile capacity {MissilesChanged} by {Missiles}",
+		"text_header": "Got Missile Launcher"
+	},
+	"Bombs": {
+		"text_desc": "While morphed, press shoot to use",
+		"text_header": "Bombs acquired"
+	},
+	"Screw Attack": {
+		"text_desc": "Deal Damage to enemies while spinning",
+		"text_header": "Screw Attack acquired"
+	},
+	"Varia Suit": {
+		"text_desc": "Reduces damage taken by 50 percent",
+		"text_header": "Varia Suit acquired"
+	},
+	"Hi-Jump Boots": {
+		"text_desc": "Increased jump height",
+		"text_header": "Hi-Jump acquired"
+	},
+	"Ice Beam": {
+		"text_desc": "Freeze enemies on contact",
+		"text_header": "Ice Beam acquired"
+	},
+	"Wave Beam": {
+		"text_desc": "Increased damage and passes through walls",
+		"text_header": "Wave Beam acquired"
+	},
+	"Long Beam": {
+		"text_desc": "Beam weapons can travel farther",
+		"text_header": "Long Beam acquired"
+	},
+	"Morph Ball": {
+		"text_desc": "Tap down to activate",
+		"text_header": "Morph Ball acquired"
+	},
+	"Nothing": {
+		"text_desc": "A useless item",
+		"text_header": "Nothing acquired"
+	},
+	"Unknown item": {
+		"text_desc": "A mysterious item",
+		"text_header": "Got Unknown Item"
+	}
+}
