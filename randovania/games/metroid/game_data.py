@@ -7,8 +7,8 @@ from randovania.layout.preset_describer import GamePresetDescriber
 
 
 def _options():
-    from randovania.interface_common.options import PerGameOptions
-    return PerGameOptions
+    from randovania.games.metroid.exporter.options import MetroidPerGameOptions
+    return MetroidPerGameOptions
 
 
 def _gui() -> game.GameGui:
