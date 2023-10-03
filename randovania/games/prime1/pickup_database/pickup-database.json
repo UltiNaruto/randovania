@@ -134,7 +134,7 @@
             "model_name": "Wave Beam",
             "offworld_models": {
                 "am2r": "sItemWaveBeam",
-                "metroid": "spr_ITEM_Wave_Beam"
+                "planets_zebeth": "spr_ITEM_Wave_Beam"
             },
             "progression": [
                 "Wave"
@@ -150,7 +150,7 @@
             "model_name": "Ice Beam",
             "offworld_models": {
                 "am2r": "sItemIceBeam",
-                "metroid": "spr_ITEM_Ice_Beam"
+                "planets_zebeth": "spr_ITEM_Ice_Beam"
             },
             "progression": [
                 "Ice"
@@ -182,7 +182,7 @@
             "offworld_models": {
                 "am2r": "sItemMissile",
                 "dread": "item_missiletank",
-                "metroid": "spr_ITEM_Missile",
+                "planets_zebeth": "spr_ITEM_Missile",
                 "prime2": "MissileExpansionPrime1"
             },
             "progression": [
@@ -218,7 +218,7 @@
             "broad_category": "visor",
             "model_name": "Combat Visor",
             "offworld_models": {
-                "metroid": "spr_ITEM_Sensor_Visor"
+                "planets_zebeth": "spr_ITEM_Sensor_Visor"
             },
             "progression": [
                 "Combat"
@@ -232,7 +232,7 @@
             "broad_category": "visor",
             "model_name": "Scan Visor",
             "offworld_models": {
-                "metroid": "spr_ITEM_Sensor_Visor",
+                "planets_zebeth": "spr_ITEM_Sensor_Visor",
                 "prime2": "ScanVisor INCOMPLETE"
             },
             "progression": [
@@ -247,7 +247,7 @@
             "broad_category": "visor",
             "model_name": "Thermal Visor",
             "offworld_models": {
-                "metroid": "spr_ITEM_Sensor_Visor"
+                "planets_zebeth": "spr_ITEM_Sensor_Visor"
             },
             "progression": [
                 "Thermal"
@@ -262,7 +262,7 @@
             "broad_category": "visor",
             "model_name": "X-Ray Visor",
             "offworld_models": {
-                "metroid": "spr_ITEM_Sensor_Visor"
+                "planets_zebeth": "spr_ITEM_Sensor_Visor"
             },
             "progression": [
                 "X-Ray"
@@ -279,7 +279,7 @@
             "offworld_models": {
                 "am2r": "sItemSpaceJump",
                 "dread": "powerup_spacejump",
-                "metroid": "spr_ITEM_Space_Jump",
+                "planets_zebeth": "spr_ITEM_Space_Jump",
                 "prime2": "SpaceJumpBoots"
             },
             "progression": [
@@ -297,7 +297,7 @@
             "offworld_models": {
                 "am2r": "sItemEnergyTank",
                 "dread": "item_energytank",
-                "metroid": "spr_ITEM_Energy_Tank",
+                "planets_zebeth": "spr_ITEM_Energy_Tank",
                 "prime2": "EnergyTank"
             },
             "progression": [
@@ -314,7 +314,7 @@
             "offworld_models": {
                 "am2r": "sItemMorphBall",
                 "dread": "powerup_morphball",
-                "metroid": "spr_ITEM_Morph"
+                "planets_zebeth": "spr_ITEM_Morph"
             },
             "progression": [
                 "MorphBall"
@@ -331,7 +331,7 @@
             "offworld_models": {
                 "am2r": "sItemBomb",
                 "dread": "powerup_bomb",
-                "metroid": "spr_ITEM_Bomb",
+                "planets_zebeth": "spr_ITEM_Bomb",
                 "prime2": "MorphBallBomb"
             },
             "progression": [
@@ -349,7 +349,7 @@
             "offworld_models": {
                 "am2r": "sItemSpeedBooster",
                 "dread": "powerup_speedbooster",
-                "metroid": "spr_ITEM_Boost_Ball",
+                "planets_zebeth": "spr_ITEM_Boost_Ball",
                 "prime2": "BoostBall"
             },
             "progression": [
@@ -419,7 +419,7 @@
             "offworld_models": {
                 "am2r": "sItemVariaSuit",
                 "dread": "powerup_variasuit",
-                "metroid": "spr_ITEM_Varia",
+                "planets_zebeth": "spr_ITEM_Varia",
                 "prime2": "VariaSuit INCOMPLETE"
             },
             "progression": [
@@ -471,7 +471,7 @@
             "offworld_models": {
                 "am2r": "sItemSMissileLauncher",
                 "dread": "powerup_supermissile",
-                "metroid": "spr_ITEM_Super_Missile",
+                "planets_zebeth": "spr_ITEM_Super_Missile",
                 "prime2": "SuperMissile"
             },
             "progression": [
@@ -529,7 +529,7 @@
             "offworld_models": {
                 "am2r": "sItemMissile",
                 "dread": "item_missiletank",
-                "metroid": "spr_ITEM_Missile",
+                "planets_zebeth": "spr_ITEM_Missile",
                 "prime2": "MissileExpansionPrime1"
             },
             "items": [
