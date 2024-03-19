@@ -64,6 +64,15 @@ Dock Weaknesses
           Strikebreak Wall
 
 
+> Tunnel
+  * Slide Tunnel
+      Open:
+          Slide
+      No lock
+
+  > Dock Rando: Disabled
+
+
 > Dock
   * Open Passage
       Open:
