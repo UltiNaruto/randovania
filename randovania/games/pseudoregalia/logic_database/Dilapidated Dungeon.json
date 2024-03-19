@@ -1,0 +1,30 @@
+{
+    "name": "Dilapidated Dungeon",
+    "extra": {
+        "area_id": "ZONE_Dungeon"
+    },
+    "areas": {
+        "Mirror Room": {
+            "default_node": "Starting Point",
+            "extra": {},
+            "nodes": {
+                "Starting Point": {
+                    "node_type": "generic",
+                    "heal": true,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {
+                        "x": -2300.0,
+                        "y": -3650.0,
+                        "z": -332.85
+                    },
+                    "valid_starting_location": true,
+                    "connections": {}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,690 @@
+{
+    "schema_version": 23,
+    "game": "pseudoregalia",
+    "resource_database": {
+        "items": {
+            "DreamBreaker": {
+                "long_name": "Dream Breaker",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "attack"
+                }
+            },
+            "Strikebreak": {
+                "long_name": "Strikebreak",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "chargeAttack"
+                }
+            },
+            "SoulCutter": {
+                "long_name": "Soul Cutter",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "projectile"
+                }
+            },
+            "Slide": {
+                "long_name": "Slide",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "slide"
+                }
+            },
+            "SolarWind": {
+                "long_name": "Solar Wind",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "slideJump"
+                }
+            },
+            "SunGreaves": {
+                "long_name": "Sun Greaves",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "airKick"
+                }
+            },
+            "Sunsetter": {
+                "long_name": "Sunsetter",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "plunge"
+                }
+            },
+            "ClingGem": {
+                "long_name": "Cling Gem",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "wallRide"
+                }
+            },
+            "AscendantLight": {
+                "long_name": "Ascendant Light",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "Light"
+                }
+            },
+            "Indignation": {
+                "long_name": "Indignation",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "powerBoost"
+                }
+            },
+            "Pilgrimage": {
+                "long_name": "Pilgrimage",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "mobileHeal"
+                }
+            },
+            "GoodGraces": {
+                "long_name": "Good Graces",
+                "max_capacity": 2,
+                "extra": {
+                    "item_id": "HealBoost"
+                }
+            },
+            "ClearMind": {
+                "long_name": "Clear Mind",
+                "max_capacity": 3,
+                "extra": {
+                    "item_id": "magicPiece"
+                }
+            },
+            "AerialFinesse": {
+                "long_name": "Aerial Finesse",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "airRecovery"
+                }
+            },
+            "Empathy": {
+                "long_name": "Empathy",
+                "max_capacity": 2,
+                "extra": {
+                    "item_id": "magicHaste"
+                }
+            },
+            "MartialProwess": {
+                "long_name": "Martial Prowess",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "damageBoost"
+                }
+            },
+            "AirKick": {
+                "long_name": "Air Kick",
+                "max_capacity": 999,
+                "extra": {
+                    "item_id": "extraKick"
+                }
+            },
+            "Memento": {
+                "long_name": "Memento",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "Map"
+                }
+            },
+            "SolSister": {
+                "long_name": "Sol Sister",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "outfitFaith"
+                }
+            },
+            "Professional": {
+                "long_name": "Professional",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "outfitPro"
+                }
+            },
+            "Sleepytime": {
+                "long_name": "Sleepytime",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "outfitSweater"
+                }
+            },
+            "Guardian": {
+                "long_name": "Guardian",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "outfitShoujo"
+                }
+            },
+            "Soldier": {
+                "long_name": "Soldier",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "outfitKnight"
+                }
+            },
+            "XIX": {
+                "long_name": "XIX",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "outfitJam"
+                }
+            },
+            "Classy": {
+                "long_name": "Classy",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "outfitClassy"
+                }
+            },
+            "BleedingHeart": {
+                "long_name": "Bleeding Heart",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "outfitPast"
+                }
+            },
+            "Nothing": {
+                "long_name": "Nothing",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "nothing"
+                }
+            },
+            "SmallKey": {
+                "long_name": "Small Key",
+                "max_capacity": 7,
+                "extra": {
+                    "item_id": "smallKey"
+                }
+            },
+            "MajorKey_Tower": {
+                "long_name": "Major Key - Tower Remains",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "key3"
+                }
+            },
+            "MajorKey_EmptyBailey": {
+                "long_name": "Major Key - Empty Bailey",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "key1"
+                }
+            },
+            "MajorKey_Keep": {
+                "long_name": "Major Key - Sansa Keep",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "key4"
+                }
+            },
+            "MajorKey_Underbelly": {
+                "long_name": "Major Key - The Underbelly",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "key2"
+                }
+            },
+            "MajorKey_Twilight": {
+                "long_name": "Major Key - Twilight Theatre",
+                "max_capacity": 1,
+                "extra": {
+                    "item_id": "key5"
+                }
+            },
+            "HealthPiece": {
+                "long_name": "Health Piece",
+                "max_capacity": 15,
+                "extra": {
+                    "item_id": "healthPiece"
+                }
+            }
+        },
+        "events": {
+            "Credits": {
+                "long_name": "Credits",
+                "extra": {}
+            }
+        },
+        "tricks": {
+            "Combat": {
+                "long_name": "Combat",
+                "description": "If this trick is enabled, the player may be expected to defeat enemies and bosses with fewer items and less health.",
+                "extra": {}
+            },
+            "Knowledge": {
+                "long_name": "Knowledge",
+                "description": "If this trick is enabled, the player may be expected to know certain hidden passageways or other lesser known facts.",
+                "extra": {}
+            },
+            "Movement": {
+                "long_name": "Movement",
+                "description": "",
+                "extra": {}
+            },
+            "SuperSlideHop": {
+                "long_name": "Super Slide Hop",
+                "description": "If this trick is enabled, the player may be expected to do super slide jumps with/without Solar Wind to traverse rooms.",
+                "extra": {}
+            },
+            "UltraSlideHop": {
+                "long_name": "Ultra Slide Hop",
+                "description": "If this trick is enabled, the player may be expected to do ultra slide jumps with/without Solar Wind to traverse rooms.",
+                "extra": {}
+            }
+        },
+        "damage": {
+            "Damage": {
+                "long_name": "Normal Damage",
+                "extra": {}
+            }
+        },
+        "versions": {
+            "1272": {
+                "long_name": "1.272",
+                "extra": {}
+            }
+        },
+        "misc": {
+            "SoftlockPrevention": {
+                "long_name": "Softlock Prevention",
+                "extra": {}
+            },
+            "EntranceRando": {
+                "long_name": "Entrance Rando",
+                "extra": {}
+            }
+        },
+        "requirement_template": {
+            "Can Do Damage": {
+                "display_name": "Can do damage",
+                "requirement": {
+                    "type": "or",
+                    "data": {
+                        "comment": "Able to do damage",
+                        "items": [
+                            {
+                                "type": "and",
+                                "data": {
+                                    "comment": null,
+                                    "items": [
+                                        {
+                                            "type": "resource",
+                                            "data": {
+                                                "type": "items",
+                                                "name": "DreamBreaker",
+                                                "amount": 1,
+                                                "negate": false
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "and",
+                                "data": {
+                                    "comment": null,
+                                    "items": [
+                                        {
+                                            "type": "resource",
+                                            "data": {
+                                                "type": "tricks",
+                                                "name": "Knowledge",
+                                                "amount": 1,
+                                                "negate": false
+                                            }
+                                        },
+                                        {
+                                            "type": "resource",
+                                            "data": {
+                                                "type": "items",
+                                                "name": "Sunsetter",
+                                                "amount": 1,
+                                                "negate": false
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "Can Use Strikebreak": {
+                "display_name": "Can use Strikebreak",
+                "requirement": {
+                    "type": "and",
+                    "data": {
+                        "comment": "Able to use Strikebreak",
+                        "items": [
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "DreamBreaker",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "Strikebreak",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "Can Slide Jump": {
+                "display_name": "Can slide jump",
+                "requirement": {
+                    "type": "and",
+                    "data": {
+                        "comment": "Able to slide jump",
+                        "items": [
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "Slide",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "SolarWind",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "damage_reductions": [],
+        "energy_tank_item_index": "HealthPiece"
+    },
+    "layers": [
+        "default"
+    ],
+    "starting_location": {
+        "region": "Dilapidated Dungeon",
+        "area": "Mirror Room",
+        "node": "Starting Point"
+    },
+    "initial_states": {
+        "Default": []
+    },
+    "minimal_logic": {
+        "items_to_exclude": [
+            {
+                "name": "DreamBreaker",
+                "when_shuffled": null
+            },
+            {
+                "name": "MajorKey_Castle",
+                "when_shuffled": null
+            },
+            {
+                "name": "majorKey_EmptyBailey",
+                "when_shuffled": null
+            },
+            {
+                "name": "majorKey_Keep",
+                "when_shuffled": null
+            },
+            {
+                "name": "majorKey_Twilight",
+                "when_shuffled": null
+            },
+            {
+                "name": "majorKey_Underbelly",
+                "when_shuffled": null
+            }
+        ],
+        "custom_item_amount": [],
+        "events_to_exclude": [
+            {
+                "name": "Credits",
+                "reason": "victory condition"
+            }
+        ],
+        "description": "Items checked for: Dream Breaker, Major Keys."
+    },
+    "victory_condition": {
+        "type": "and",
+        "data": {
+            "comment": null,
+            "items": [
+                {
+                    "type": "resource",
+                    "data": {
+                        "type": "events",
+                        "name": "Credits",
+                        "amount": 1,
+                        "negate": false
+                    }
+                }
+            ]
+        }
+    },
+    "dock_weakness_database": {
+        "types": {
+            "door": {
+                "name": "Door",
+                "extra": {},
+                "items": {
+                    "No Wall": {
+                        "extra": {},
+                        "requirement": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "lock": null
+                    },
+                    "Breakable Wall": {
+                        "extra": {},
+                        "requirement": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "lock": {
+                            "lock_type": "front-blast-back-free-unlock",
+                            "requirement": {
+                                "type": "and",
+                                "data": {
+                                    "comment": null,
+                                    "items": [
+                                        {
+                                            "type": "template",
+                                            "data": "Can Do Damage"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "Strikebreak Wall": {
+                        "extra": {},
+                        "requirement": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "lock": {
+                            "lock_type": "front-blast-back-free-unlock",
+                            "requirement": {
+                                "type": "and",
+                                "data": {
+                                    "comment": null,
+                                    "items": [
+                                        {
+                                            "type": "template",
+                                            "data": "Can Use Strikebreak"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "Small Key Door": {
+                        "extra": {},
+                        "requirement": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "lock": {
+                            "lock_type": "front-blast-back-free-unlock",
+                            "requirement": {
+                                "type": "and",
+                                "data": {
+                                    "comment": null,
+                                    "items": [
+                                        {
+                                            "type": "resource",
+                                            "data": {
+                                                "type": "items",
+                                                "name": "SmallKey",
+                                                "amount": 7,
+                                                "negate": false
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "Locked Door": {
+                        "extra": {},
+                        "requirement": {
+                            "type": "or",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "lock": {
+                            "lock_type": "front-blast-back-impossible",
+                            "requirement": {
+                                "type": "and",
+                                "data": {
+                                    "comment": null,
+                                    "items": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "dock_rando": {
+                    "unlocked": "No Wall",
+                    "locked": "Locked Door",
+                    "change_from": [
+                        "Breakable Wall",
+                        "Strikebreak Wall"
+                    ],
+                    "change_to": [
+                        "Breakable Wall",
+                        "No Wall",
+                        "Strikebreak Wall"
+                    ]
+                }
+            },
+            "other": {
+                "name": "Dock",
+                "extra": {},
+                "items": {
+                    "Open Passage": {
+                        "extra": {},
+                        "requirement": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "lock": null
+                    },
+                    "Not Determined": {
+                        "extra": {},
+                        "requirement": {
+                            "type": "or",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "lock": null
+                    }
+                },
+                "dock_rando": null
+            },
+            "teleporter": {
+                "name": "Teleporter",
+                "extra": {
+                    "is_teleporter": true,
+                    "ignore_for_hints": true
+                },
+                "items": {
+                    "Teleporter": {
+                        "extra": {},
+                        "requirement": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "lock": null
+                    }
+                },
+                "dock_rando": null
+            }
+        },
+        "default_weakness": {
+            "type": "other",
+            "name": "Not Determined"
+        },
+        "dock_rando": {
+            "force_change_two_way": false,
+            "resolver_attempts": 125,
+            "to_shuffle_proportion": 1.0
+        }
+    },
+    "used_trick_levels": {
+        "Knowledge": [
+            1
+        ]
+    },
+    "regions": [
+        "Castle Sansa.json",
+        "Dilapidated Dungeon.json",
+        "Distorted Memory.json",
+        "Empty Bailey.json",
+        "Listless Library.json",
+        "Sansa Keep.json",
+        "Tower Remains.json",
+        "Twilight Theatre.json",
+        "The Underbelly.json"
+    ]
+}
