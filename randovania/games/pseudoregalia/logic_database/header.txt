@@ -1,0 +1,91 @@
+====================
+Templates
+
+* Can do damage:
+      Any of the following:
+          # Able to do damage
+          Dream Breaker
+          Sunsetter and Knowledge (Beginner)
+
+* Can use Strikebreak:
+      # Able to use Strikebreak
+      Dream Breaker and Strikebreak
+
+* Can slide jump:
+      # Able to slide jump
+      Slide and Solar Wind
+
+====================
+Dock Weaknesses
+
+> Door
+  * No Wall
+      Open:
+          Trivial
+      No lock
+
+
+  * Breakable Wall
+      Open:
+          Trivial
+      Lock type: FRONT_BLAST_BACK_FREE_UNLOCK
+          Can do damage
+
+
+  * Strikebreak Wall
+      Open:
+          Trivial
+      Lock type: FRONT_BLAST_BACK_FREE_UNLOCK
+          Can use Strikebreak
+
+
+  * Small Key Door
+      Open:
+          Trivial
+      Lock type: FRONT_BLAST_BACK_FREE_UNLOCK
+          Small Key ≥ 7
+
+
+  * Locked Door
+      Open:
+          Impossible
+      Lock type: FRONT_BLAST_BACK_IMPOSSIBLE
+          Trivial
+
+  > Dock Rando:
+      Unlocked: No Wall
+      Locked: Locked Door
+      Change from:
+          Breakable Wall
+          Strikebreak Wall
+      Change to:
+          Breakable Wall
+          No Wall
+          Strikebreak Wall
+
+
+> Dock
+  * Open Passage
+      Open:
+          Trivial
+      No lock
+
+
+  * Not Determined
+      Open:
+          Impossible
+      No lock
+
+  > Dock Rando: Disabled
+
+
+> Teleporter
+* Extra - is_teleporter: True
+* Extra - ignore_for_hints: True
+  * Teleporter
+      Open:
+          Trivial
+      No lock
+
+  > Dock Rando: Disabled
+

@@ -1,0 +1,8 @@
+----------------
+Mirror Room
+> Starting Point; Heals? True; Spawn Point; Default Node
+  * Layers: default
+  * Extra - x: -2300.0
+  * Extra - y: -3650.0
+  * Extra - z: -332.85
+
