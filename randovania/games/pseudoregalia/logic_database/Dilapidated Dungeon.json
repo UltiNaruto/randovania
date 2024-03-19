@@ -4,6 +4,62 @@
         "area_id": "ZONE_Dungeon"
     },
     "areas": {
+        "Axe Parkour Room": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Dark Parkour Room": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Dark Hub": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Dark Labyrinth": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Dream Breaker Access": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Dream Breaker Exit": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Dream Breaker Room": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Dream Breaker Save Room": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
         "Mirror Room": {
             "default_node": "Starting Point",
             "extra": {},
@@ -24,6 +80,104 @@
                     "valid_starting_location": true,
                     "connections": {}
                 }
+            }
+        },
+        "Overlook": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Path to Twilight Theatre": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Path to Twilight Theatre Access": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Path to Underbelly": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Path to Underbelly Access": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Prison": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Prison Challenge": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Prison Access": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Prison Save Room": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Slide Access": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Slide Exit": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Slide Room": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Slide Save Room": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
+            }
+        },
+        "Strong Eyes Arena": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+
             }
         }
     }
