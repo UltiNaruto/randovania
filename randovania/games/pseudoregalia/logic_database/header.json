@@ -610,6 +610,34 @@
                     ]
                 }
             },
+            "tunnel": {
+                "name": "Tunnel",
+                "extra": {},
+                "items": {
+                    "Slide Tunnel": {
+                        "extra": {},
+                        "requirement": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "Slide",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "lock": null
+                    }
+                },
+                "dock_rando": null
+            },
             "other": {
                 "name": "Dock",
                 "extra": {},
