@@ -8,56 +8,657 @@
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Dream Breaker Save Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Save Room",
+                        "node": "Door to Axe Parkour Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Dark Labyrinth Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dark Labyrinth Access",
+                        "node": "Door to Axe Parkour Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Dark Parkour Room": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Dark Hub": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dark Hub",
+                        "node": "Door to Dark Parkour Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Path to Twilight Theatre Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Path to Twilight Theatre Access",
+                        "node": "Door to Dark Parkour Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Dark Hub": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Dark Labyrinth": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dark Labyrinth",
+                        "node": "Door to Dark Hub"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Path to Underbelly Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Path to Underbelly Access",
+                        "node": "Door to Dark Hub"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Dark Parkour Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dark Parkour Room",
+                        "node": "Door to Dark Hub"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Dark Labyrinth": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Dark Labyrinth Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dark Labyrinth Access",
+                        "node": "Door to Dark Labyrinth"
+                    },
+                    "default_dock_weakness": "Breakable Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Dark Hub": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dark Hub",
+                        "node": "Door to Dark Labyrinth"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
+            }
+        },
+        "Dark Labyrinth Access": {
+            "default_node": null,
+            "extra": {},
+            "nodes": {
+                "Door to Axe Parkour Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Axe Parkour Room",
+                        "node": "Door to Dark Labyrinth Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Slide Save Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Slide Save Room",
+                        "node": "Door to Dark Labyrinth Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Dark Labyrinth": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dark Labyrinth",
+                        "node": "Door to Dark Labyrinth Access"
+                    },
+                    "default_dock_weakness": "Breakable Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Dream Breaker Access": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Mirror Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Mirror Room",
+                        "node": "Door to Dream Breaker Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {
+                        "Door to Dream Breaker Room": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "Door to Dream Breaker Save Room": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
+                },
+                "Door to Dream Breaker Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Room",
+                        "node": "Door to Dream Breaker Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {
+                        "Door to Mirror Room": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
+                },
+                "Door to Dream Breaker Save Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Save Room",
+                        "node": "Door to Dream Breaker Access"
+                    },
+                    "default_dock_weakness": "Breakable Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {
+                        "Door to Mirror Room": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
+                },
+                "Door to Path to Castle Sansa": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Path to Castle Sansa",
+                        "node": "Door to Dream Breaker Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Dream Breaker Exit": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Dream Breaker Room (Front)": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Room",
+                        "node": "Door to Dream Breaker Exit (Front)"
+                    },
+                    "default_dock_weakness": "Breakable Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Dream Breaker Room (Back)": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Room",
+                        "node": "Door to Dream Breaker Exit (Back)"
+                    },
+                    "default_dock_weakness": "Breakable Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Dream Breaker Room": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Dream Breaker Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Access",
+                        "node": "Door to Dream Breaker Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Dream Breaker Exit (Front)": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Exit",
+                        "node": "Door to Dream Breaker Room (Front)"
+                    },
+                    "default_dock_weakness": "Breakable Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Dream Breaker Exit (Back)": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Exit",
+                        "node": "Door to Dream Breaker Room (Back)"
+                    },
+                    "default_dock_weakness": "Breakable Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Dream Breaker Save Room": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Dream Breaker Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Access",
+                        "node": "Door to Dream Breaker Save Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {
+                        "Save Crystal": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
+                },
+                "Save Crystal": {
+                    "node_type": "generic",
+                    "heal": true,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "connections": {
+                        "Door to Dream Breaker Access": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "Door to Axe Parkour Room": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
+                },
+                "Door to Axe Parkour Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Axe Parkour Room",
+                        "node": "Door to Dream Breaker Save Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {
+                        "Save Crystal": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
+                }
             }
         },
         "Mirror Room": {
@@ -78,106 +679,775 @@
                         "z": -332.85
                     },
                     "valid_starting_location": true,
-                    "connections": {}
+                    "connections": {
+                        "Door to Dream Breaker Access": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
+                },
+                "Door to Dream Breaker Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Access",
+                        "node": "Door to Mirror Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {
+                        "Starting Point": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
                 }
             }
         },
-        "Overlook": {
+        "Path to Castle Sansa": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Prison Save Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Prison Save Room",
+                        "node": "Door to Path to Castle Sansa"
+                    },
+                    "default_dock_weakness": "Small Key Door",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Dream Breaker Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dream Breaker Access",
+                        "node": "Door to Path to Castle Sansa"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Path to Twilight Theatre": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Path to Twilight Theatre Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Path to Twilight Theatre Access",
+                        "node": "Door to Path to Twilight Theatre"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Path to Twilight Theatre Access": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Dark Parkour Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dark Parkour Room",
+                        "node": "Door to Path to Twilight Theatre Access"
+                    },
+                    "default_dock_weakness": "Breakable Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Path to Twilight Theatre": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Path to Twilight Theatre",
+                        "node": "Door to Path to Twilight Theatre Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Path to Underbelly": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Path to Underbelly Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Path to Underbelly Access",
+                        "node": "Door to Path to Underbelly"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Path to Underbelly Access": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Dark Hub": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dark Hub",
+                        "node": "Door to Path to Underbelly Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Path to Underbelly": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Path to Underbelly",
+                        "node": "Door to Path to Underbelly Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Prison": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Prison Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Prison Access",
+                        "node": "Door to Prison"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Prison Challenge": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Prison Challenge",
+                        "node": "Door to Prison"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Prison Save Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Prison Save Room",
+                        "node": "Door to Prison"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Prison Challenge": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Prison": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Prison",
+                        "node": "Door to Prison Challenge"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Prison Access": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Tunnel to Slide Save Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "tunnel",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Slide Save Room",
+                        "node": "Tunnel to Prison Access"
+                    },
+                    "default_dock_weakness": "Slide Tunnel",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Prison": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Prison",
+                        "node": "Door to Prison Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Prison Save Room": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Prison": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Prison",
+                        "node": "Door to Prison Save Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Strong Eyes Arena": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Strong Eyes Arena",
+                        "node": "Door to Prison Save Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Path to Castle Sansa": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Path to Castle Sansa",
+                        "node": "Door to Prison Save Room"
+                    },
+                    "default_dock_weakness": "Small Key Door",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Slide Access": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Slide Save Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Slide Save Room",
+                        "node": "Door to Slide Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Slide Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Slide Room",
+                        "node": "Door to Slide Access"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Tunnel to Slide Exit": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "tunnel",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Slide Exit",
+                        "node": "Tunnel to Slide Access"
+                    },
+                    "default_dock_weakness": "Slide Tunnel",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Slide Exit": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Tunnel to Slide Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "tunnel",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Slide Room",
+                        "node": "Tunnel to Slide Exit"
+                    },
+                    "default_dock_weakness": "Slide Tunnel",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Tunnel to Slide Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "tunnel",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Slide Access",
+                        "node": "Tunnel to Slide Exit"
+                    },
+                    "default_dock_weakness": "Slide Tunnel",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Slide Room": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Slide Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Slide Access",
+                        "node": "Door to Slide Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Tunnel to Slide Exit": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "tunnel",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Slide Exit",
+                        "node": "Tunnel to Slide Room"
+                    },
+                    "default_dock_weakness": "Slide Tunnel",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Slide Save Room": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Dark Labyrinth Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Dark Labyrinth Access",
+                        "node": "Door to Slide Save Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Door to Slide Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Slide Access",
+                        "node": "Door to Slide Save Room"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                },
+                "Tunnel to Prison Access": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "tunnel",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Prison Access",
+                        "node": "Tunnel to Slide Save Room"
+                    },
+                    "default_dock_weakness": "Slide Tunnel",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         },
         "Strong Eyes Arena": {
             "default_node": null,
             "extra": {},
             "nodes": {
-
+                "Door to Prison Save Room": {
+                    "node_type": "dock",
+                    "heal": false,
+                    "coordinates": null,
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "dock_type": "door",
+                    "default_connection": {
+                        "region": "Dilapidated Dungeon",
+                        "area": "Prison Save Room",
+                        "node": "Door to Strong Eyes Arena"
+                    },
+                    "default_dock_weakness": "No Wall",
+                    "exclude_from_dock_rando": false,
+                    "incompatible_dock_weaknesses": [],
+                    "override_default_open_requirement": null,
+                    "override_default_lock_requirement": null,
+                    "connections": {}
+                }
             }
         }
     }
