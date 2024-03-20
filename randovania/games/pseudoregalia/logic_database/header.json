@@ -246,6 +246,18 @@
             "Credits": {
                 "long_name": "Credits",
                 "extra": {}
+            },
+            "Prison Challenge Lever": {
+                "long_name": "Prison Challenge Lever",
+                "extra": {}
+            },
+            "Prison Save Room Lever": {
+                "long_name": "Prison Save Room Lever",
+                "extra": {}
+            },
+            "Strong Eyes": {
+                "long_name": "Strong Eyes",
+                "extra": {}
             }
         },
         "tricks": {
