@@ -18,6 +18,9 @@ Templates
 * Simple Height Gain:
       Cling Gem or Sun Greaves or Sunsetter
 
+* Simple Wall Jump:
+      Cling Gem or Sun Greaves
+
 ====================
 Dock Weaknesses
 
