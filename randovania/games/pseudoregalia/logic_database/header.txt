@@ -21,6 +21,9 @@ Templates
 * Simple Wall Jump:
       Cling Gem or Sun Greaves
 
+* Bounce Off Torches:
+      Ascendant Light and Knowledge (Beginner)
+
 ====================
 Dock Weaknesses
 

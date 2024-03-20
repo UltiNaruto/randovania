@@ -101,6 +101,8 @@ Dream Breaker Access
       Trivial
   > Door to Dream Breaker Save Room
       Trivial
+  > Pickup (Health Piece)
+      Sunsetter or Bounce Off Torches
 
 > Door to Dream Breaker Room; Heals? False
   * Layers: default
