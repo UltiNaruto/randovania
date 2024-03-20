@@ -544,6 +544,27 @@
                                 "comment": null,
                                 "items": []
                             }
+                        },
+                        "Pickup (Health Piece)": {
+                            "type": "or",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "Sunsetter",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "template",
+                                        "data": "Bounce Off Torches"
+                                    }
+                                ]
+                            }
                         }
                     }
                 },

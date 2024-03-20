@@ -488,6 +488,35 @@
                         ]
                     }
                 }
+            },
+            "Bounce Off Torches": {
+                "display_name": "Bounce Off Torches",
+                "requirement": {
+                    "type": "and",
+                    "data": {
+                        "comment": null,
+                        "items": [
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "AscendantLight",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "tricks",
+                                    "name": "Knowledge",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            }
+                        ]
+                    }
+                }
             }
         },
         "damage_reductions": [],
