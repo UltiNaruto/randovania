@@ -1,8 +1,285 @@
 ----------------
+Axe Parkour Room
+> Door to Dream Breaker Save Room; Heals? False
+  * Layers: default
+  * No Wall to Dream Breaker Save Room/Door to Axe Parkour Room
+
+> Door to Dark Labyrinth Access; Heals? False
+  * Layers: default
+  * No Wall to Dark Labyrinth Access/Door to Axe Parkour Room
+
+----------------
+Dark Parkour Room
+> Door to Dark Hub; Heals? False
+  * Layers: default
+  * No Wall to Dark Hub/Door to Dark Parkour Room
+
+> Door to Path to Twilight Theatre Access; Heals? False
+  * Layers: default
+  * No Wall to Path to Twilight Theatre Access/Door to Dark Parkour Room
+
+----------------
+Dark Hub
+> Door to Dark Labyrinth; Heals? False
+  * Layers: default
+  * No Wall to Dark Labyrinth/Door to Dark Hub
+
+> Door to Path to Underbelly Access; Heals? False
+  * Layers: default
+  * No Wall to Path to Underbelly Access/Door to Dark Hub
+
+> Door to Dark Parkour Room; Heals? False
+  * Layers: default
+  * No Wall to Dark Parkour Room/Door to Dark Hub
+
+----------------
+Dark Labyrinth
+> Door to Dark Labyrinth Access; Heals? False
+  * Layers: default
+  * Breakable Wall to Dark Labyrinth Access/Door to Dark Labyrinth
+
+> Door to Dark Hub; Heals? False
+  * Layers: default
+  * No Wall to Dark Hub/Door to Dark Labyrinth
+
+----------------
+Dark Labyrinth Access
+> Door to Axe Parkour Room; Heals? False
+  * Layers: default
+  * No Wall to Axe Parkour Room/Door to Dark Labyrinth Access
+
+> Door to Slide Save Room; Heals? False
+  * Layers: default
+  * No Wall to Slide Save Room/Door to Dark Labyrinth Access
+
+> Door to Dark Labyrinth; Heals? False
+  * Layers: default
+  * Breakable Wall to Dark Labyrinth/Door to Dark Labyrinth Access
+
+----------------
+Dream Breaker Access
+> Door to Mirror Room; Heals? False
+  * Layers: default
+  * No Wall to Mirror Room/Door to Dream Breaker Access
+  > Door to Dream Breaker Room
+      Trivial
+  > Door to Dream Breaker Save Room
+      Trivial
+
+> Door to Dream Breaker Room; Heals? False
+  * Layers: default
+  * No Wall to Dream Breaker Room/Door to Dream Breaker Access
+  > Door to Mirror Room
+      Trivial
+
+> Door to Dream Breaker Save Room; Heals? False
+  * Layers: default
+  * Breakable Wall to Dream Breaker Save Room/Door to Dream Breaker Access
+  > Door to Mirror Room
+      Trivial
+
+> Door to Path to Castle Sansa; Heals? False
+  * Layers: default
+  * No Wall to Path to Castle Sansa/Door to Dream Breaker Access
+
+----------------
+Dream Breaker Exit
+> Door to Dream Breaker Room (Front); Heals? False
+  * Layers: default
+  * Breakable Wall to Dream Breaker Room/Door to Dream Breaker Exit (Front)
+
+> Door to Dream Breaker Room (Back); Heals? False
+  * Layers: default
+  * Breakable Wall to Dream Breaker Room/Door to Dream Breaker Exit (Back)
+
+----------------
+Dream Breaker Room
+> Door to Dream Breaker Access; Heals? False
+  * Layers: default
+  * No Wall to Dream Breaker Access/Door to Dream Breaker Room
+
+> Door to Dream Breaker Exit (Front); Heals? False
+  * Layers: default
+  * Breakable Wall to Dream Breaker Exit/Door to Dream Breaker Room (Front)
+
+> Door to Dream Breaker Exit (Back); Heals? False
+  * Layers: default
+  * Breakable Wall to Dream Breaker Exit/Door to Dream Breaker Room (Back)
+
+----------------
+Dream Breaker Save Room
+> Door to Dream Breaker Access; Heals? False
+  * Layers: default
+  * No Wall to Dream Breaker Access/Door to Dream Breaker Save Room
+  > Save Crystal
+      Trivial
+
+> Save Crystal; Heals? True
+  * Layers: default
+  > Door to Dream Breaker Access
+      Trivial
+  > Door to Axe Parkour Room
+      Trivial
+
+> Door to Axe Parkour Room; Heals? False
+  * Layers: default
+  * No Wall to Axe Parkour Room/Door to Dream Breaker Save Room
+  > Save Crystal
+      Trivial
+
+----------------
 Mirror Room
 > Starting Point; Heals? True; Spawn Point; Default Node
   * Layers: default
   * Extra - x: -2300.0
   * Extra - y: -3650.0
   * Extra - z: -332.85
+  > Door to Dream Breaker Access
+      Trivial
+
+> Door to Dream Breaker Access; Heals? False
+  * Layers: default
+  * No Wall to Dream Breaker Access/Door to Mirror Room
+  > Starting Point
+      Trivial
+
+----------------
+Path to Castle Sansa
+> Door to Prison Save Room; Heals? False
+  * Layers: default
+  * Small Key Door to Prison Save Room/Door to Path to Castle Sansa
+
+> Door to Dream Breaker Access; Heals? False
+  * Layers: default
+  * No Wall to Dream Breaker Access/Door to Path to Castle Sansa
+
+----------------
+Path to Twilight Theatre
+> Door to Path to Twilight Theatre Access; Heals? False
+  * Layers: default
+  * No Wall to Path to Twilight Theatre Access/Door to Path to Twilight Theatre
+
+----------------
+Path to Twilight Theatre Access
+> Door to Dark Parkour Room; Heals? False
+  * Layers: default
+  * Breakable Wall to Dark Parkour Room/Door to Path to Twilight Theatre Access
+
+> Door to Path to Twilight Theatre; Heals? False
+  * Layers: default
+  * No Wall to Path to Twilight Theatre/Door to Path to Twilight Theatre Access
+
+----------------
+Path to Underbelly
+> Door to Path to Underbelly Access; Heals? False
+  * Layers: default
+  * No Wall to Path to Underbelly Access/Door to Path to Underbelly
+
+----------------
+Path to Underbelly Access
+> Door to Dark Hub; Heals? False
+  * Layers: default
+  * No Wall to Dark Hub/Door to Path to Underbelly Access
+
+> Door to Path to Underbelly; Heals? False
+  * Layers: default
+  * No Wall to Path to Underbelly/Door to Path to Underbelly Access
+
+----------------
+Prison
+> Door to Prison Access; Heals? False
+  * Layers: default
+  * No Wall to Prison Access/Door to Prison
+
+> Door to Prison Challenge; Heals? False
+  * Layers: default
+  * No Wall to Prison Challenge/Door to Prison
+
+> Door to Prison Save Room; Heals? False
+  * Layers: default
+  * No Wall to Prison Save Room/Door to Prison
+
+----------------
+Prison Challenge
+> Door to Prison; Heals? False
+  * Layers: default
+  * No Wall to Prison/Door to Prison Challenge
+
+----------------
+Prison Access
+> Tunnel to Slide Save Room; Heals? False
+  * Layers: default
+  * Slide Tunnel to Slide Save Room/Tunnel to Prison Access
+
+> Door to Prison; Heals? False
+  * Layers: default
+  * No Wall to Prison/Door to Prison Access
+
+----------------
+Prison Save Room
+> Door to Prison; Heals? False
+  * Layers: default
+  * No Wall to Prison/Door to Prison Save Room
+
+> Door to Strong Eyes Arena; Heals? False
+  * Layers: default
+  * No Wall to Strong Eyes Arena/Door to Prison Save Room
+
+> Door to Path to Castle Sansa; Heals? False
+  * Layers: default
+  * Small Key Door to Path to Castle Sansa/Door to Prison Save Room
+
+----------------
+Slide Access
+> Door to Slide Save Room; Heals? False
+  * Layers: default
+  * No Wall to Slide Save Room/Door to Slide Access
+
+> Door to Slide Room; Heals? False
+  * Layers: default
+  * No Wall to Slide Room/Door to Slide Access
+
+> Tunnel to Slide Exit; Heals? False
+  * Layers: default
+  * Slide Tunnel to Slide Exit/Tunnel to Slide Access
+
+----------------
+Slide Exit
+> Tunnel to Slide Room; Heals? False
+  * Layers: default
+  * Slide Tunnel to Slide Room/Tunnel to Slide Exit
+
+> Tunnel to Slide Access; Heals? False
+  * Layers: default
+  * Slide Tunnel to Slide Access/Tunnel to Slide Exit
+
+----------------
+Slide Room
+> Door to Slide Access; Heals? False
+  * Layers: default
+  * No Wall to Slide Access/Door to Slide Room
+
+> Tunnel to Slide Exit; Heals? False
+  * Layers: default
+  * Slide Tunnel to Slide Exit/Tunnel to Slide Room
+
+----------------
+Slide Save Room
+> Door to Dark Labyrinth Access; Heals? False
+  * Layers: default
+  * No Wall to Dark Labyrinth Access/Door to Slide Save Room
+
+> Door to Slide Access; Heals? False
+  * Layers: default
+  * No Wall to Slide Access/Door to Slide Save Room
+
+> Tunnel to Prison Access; Heals? False
+  * Layers: default
+  * Slide Tunnel to Prison Access/Tunnel to Slide Save Room
+
+----------------
+Strong Eyes Arena
+> Door to Prison Save Room; Heals? False
+  * Layers: default
+  * No Wall to Prison Save Room/Door to Strong Eyes Arena
 
