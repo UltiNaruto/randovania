@@ -15,6 +15,9 @@ Templates
       # Able to slide jump
       Slide and Solar Wind
 
+* Simple Height Gain:
+      Cling Gem or Sun Greaves or Sunsetter
+
 ====================
 Dock Weaknesses
 
