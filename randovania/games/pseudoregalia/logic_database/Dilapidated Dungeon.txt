@@ -18,6 +18,10 @@ Dark Parkour Room
   * Layers: default
   * No Wall to Path to Twilight Theatre Access/Door to Dark Parkour Room
 
+> Pickup (Good Graces); Heals? False
+  * Layers: default
+  * Pickup 7; Category? Minor
+
 ----------------
 Dark Hub
 > Door to Dark Labyrinth; Heals? False
@@ -82,6 +86,10 @@ Dream Breaker Access
   * Layers: default
   * No Wall to Path to Castle Sansa/Door to Dream Breaker Access
 
+> Pickup (Health Piece); Heals? False
+  * Layers: default
+  * Pickup 5; Category? Minor
+
 ----------------
 Dream Breaker Exit
 > Door to Dream Breaker Room (Front); Heals? False
@@ -105,6 +113,10 @@ Dream Breaker Room
 > Door to Dream Breaker Exit (Back); Heals? False
   * Layers: default
   * Breakable Wall to Dream Breaker Exit/Door to Dream Breaker Room (Back)
+
+> Pickup (Dream Breaker); Heals? False
+  * Layers: default
+  * Pickup 2; Category? Major
 
 ----------------
 Dream Breaker Save Room
@@ -142,6 +154,10 @@ Mirror Room
   * No Wall to Dream Breaker Access/Door to Mirror Room
   > Starting Point
       Trivial
+
+> Pickup (Sol Sister); Heals? False
+  * Layers: default
+  * Pickup 6; Category? Minor
 
 ----------------
 Path to Castle Sansa
@@ -199,11 +215,19 @@ Prison
   * Layers: default
   * No Wall to Prison Save Room/Door to Prison
 
+> Pickup (Small Key); Heals? False
+  * Layers: default
+  * Pickup 4; Category? Major
+
 ----------------
 Prison Challenge
 > Door to Prison; Heals? False
   * Layers: default
   * No Wall to Prison/Door to Prison Challenge
+
+> Pickup (Health Piece); Heals? False
+  * Layers: default
+  * Pickup 0; Category? Minor
 
 ----------------
 Prison Access
@@ -263,6 +287,10 @@ Slide Room
   * Layers: default
   * Slide Tunnel to Slide Exit/Tunnel to Slide Room
 
+> Pickup (Slide); Heals? False
+  * Layers: default
+  * Pickup 3; Category? Major
+
 ----------------
 Slide Save Room
 > Door to Dark Labyrinth Access; Heals? False
@@ -282,4 +310,8 @@ Strong Eyes Arena
 > Door to Prison Save Room; Heals? False
   * Layers: default
   * No Wall to Prison Save Room/Door to Strong Eyes Arena
+
+> Pickup (Small Key); Heals? False
+  * Layers: default
+  * Pickup 1; Category? Major
 
