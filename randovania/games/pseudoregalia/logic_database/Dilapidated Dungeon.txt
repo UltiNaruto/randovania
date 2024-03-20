@@ -220,16 +220,32 @@ Path to Castle Sansa
   * Small Key Door to Prison Save Room/Door to Path to Castle Sansa
   > Door to Dream Breaker Access
       Trivial
+  > Teleporter to Castle Sansa
+      Trivial
 
 > Door to Dream Breaker Access; Heals? False
   * Layers: default
   * No Wall to Dream Breaker Access/Door to Path to Castle Sansa
+
+> Teleporter to Castle Sansa; Heals? False
+  * Layers: default
+  * Teleporter to Path to Dilapidated Dungeon/Teleporter to Dilapidated Dungeon
+  > Door to Prison Save Room
+      Trivial
 
 ----------------
 Path to Twilight Theatre
 > Door to Path to Twilight Theatre Access; Heals? False
   * Layers: default
   * No Wall to Path to Twilight Theatre Access/Door to Path to Twilight Theatre
+  > Teleporter to Twilight Theatre
+      Ascendant Light
+
+> Teleporter to Twilight Theatre; Heals? False
+  * Layers: default
+  * Teleporter to Path to Dilapidated Dungeon/Teleporter to Dilapidated Dungeon
+  > Door to Path to Twilight Theatre Access
+      Ascendant Light
 
 ----------------
 Path to Twilight Theatre Access
@@ -252,6 +268,14 @@ Path to Underbelly
 > Door to Path to Underbelly Access; Heals? False
   * Layers: default
   * No Wall to Path to Underbelly Access/Door to Path to Underbelly
+  > Teleporter to The Underbelly
+      Ascendant Light
+
+> Teleporter to The Underbelly; Heals? False
+  * Layers: default
+  * Teleporter to Path to Dilapidated Dungeon/Door to Dilapidated Dungeon
+  > Door to Path to Underbelly Access
+      Ascendant Light
 
 ----------------
 Path to Underbelly Access

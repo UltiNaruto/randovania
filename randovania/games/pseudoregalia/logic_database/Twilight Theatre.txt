@@ -1,0 +1,6 @@
+----------------
+Path to Dilapidated Dungeon
+> Teleporter to Dilapidated Dungeon; Heals? False
+  * Layers: default
+  * Teleporter to Path to Twilight Theatre/Teleporter to Twilight Theatre
+

@@ -1,0 +1,6 @@
+----------------
+Path to Dilapidated Dungeon
+> Door to Dilapidated Dungeon; Heals? False
+  * Layers: default
+  * No Wall to Path to Underbelly/Teleporter to The Underbelly
+
