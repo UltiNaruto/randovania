@@ -253,7 +253,7 @@ Path to Twilight Theatre
 Path to Twilight Theatre Access
 > Door to Dark Parkour Room; Heals? False
   * Layers: default
-  * Breakable Wall to Dark Parkour Room/Door to Path to Twilight Theatre Access
+  * No Wall to Dark Parkour Room/Door to Path to Twilight Theatre Access
   > Door to Path to Twilight Theatre
       All of the following:
           Ascendant Light

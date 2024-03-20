@@ -1256,7 +1256,7 @@
                         "area": "Dark Parkour Room",
                         "node": "Door to Path to Twilight Theatre Access"
                     },
-                    "default_dock_weakness": "Breakable Wall",
+                    "default_dock_weakness": "No Wall",
                     "exclude_from_dock_rando": false,
                     "incompatible_dock_weaknesses": [],
                     "override_default_open_requirement": null,
