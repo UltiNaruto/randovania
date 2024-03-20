@@ -3,62 +3,94 @@ Axe Parkour Room
 > Door to Dream Breaker Save Room; Heals? False
   * Layers: default
   * No Wall to Dream Breaker Save Room/Door to Axe Parkour Room
+  > Door to Dark Labyrinth Access
+      Trivial
 
 > Door to Dark Labyrinth Access; Heals? False
   * Layers: default
-  * No Wall to Dark Labyrinth Access/Door to Axe Parkour Room
+  * Breakable Wall to Dark Labyrinth Access/Door to Axe Parkour Room
+  > Door to Dream Breaker Save Room
+      Trivial
 
 ----------------
 Dark Parkour Room
 > Door to Dark Hub; Heals? False
   * Layers: default
   * No Wall to Dark Hub/Door to Dark Parkour Room
+  > Door to Path to Twilight Theatre Access
+      Ascendant Light
 
 > Door to Path to Twilight Theatre Access; Heals? False
   * Layers: default
   * No Wall to Path to Twilight Theatre Access/Door to Dark Parkour Room
+  > Door to Dark Hub
+      Ascendant Light
+  > Pickup (Good Graces)
+      Ascendant Light and Simple Wall Jump
 
 > Pickup (Good Graces); Heals? False
   * Layers: default
   * Pickup 7; Category? Minor
+  > Door to Path to Twilight Theatre Access
+      Ascendant Light and Simple Wall Jump
 
 ----------------
 Dark Hub
 > Door to Dark Labyrinth; Heals? False
   * Layers: default
   * No Wall to Dark Labyrinth/Door to Dark Hub
+  > Door to Path to Underbelly Access
+      Ascendant Light
+  > Door to Dark Parkour Room
+      Ascendant Light
 
 > Door to Path to Underbelly Access; Heals? False
   * Layers: default
   * No Wall to Path to Underbelly Access/Door to Dark Hub
+  > Door to Dark Labyrinth
+      Ascendant Light
 
 > Door to Dark Parkour Room; Heals? False
   * Layers: default
   * No Wall to Dark Parkour Room/Door to Dark Hub
+  > Door to Dark Labyrinth
+      Ascendant Light
 
 ----------------
 Dark Labyrinth
 > Door to Dark Labyrinth Access; Heals? False
   * Layers: default
   * Breakable Wall to Dark Labyrinth Access/Door to Dark Labyrinth
+  > Door to Dark Hub
+      Ascendant Light and Simple Height Gain
 
 > Door to Dark Hub; Heals? False
   * Layers: default
   * No Wall to Dark Hub/Door to Dark Labyrinth
+  > Door to Dark Labyrinth Access
+      Ascendant Light
 
 ----------------
 Dark Labyrinth Access
 > Door to Axe Parkour Room; Heals? False
   * Layers: default
-  * No Wall to Axe Parkour Room/Door to Dark Labyrinth Access
+  * Breakable Wall to Axe Parkour Room/Door to Dark Labyrinth Access
+  > Door to Slide Save Room
+      Trivial
+  > Door to Dark Labyrinth
+      Trivial
 
 > Door to Slide Save Room; Heals? False
   * Layers: default
   * No Wall to Slide Save Room/Door to Dark Labyrinth Access
+  > Door to Axe Parkour Room
+      Trivial
 
 > Door to Dark Labyrinth; Heals? False
   * Layers: default
   * Breakable Wall to Dark Labyrinth/Door to Dark Labyrinth Access
+  > Door to Axe Parkour Room
+      Trivial
 
 ----------------
 Dream Breaker Access
@@ -85,38 +117,56 @@ Dream Breaker Access
 > Door to Path to Castle Sansa; Heals? False
   * Layers: default
   * No Wall to Path to Castle Sansa/Door to Dream Breaker Access
+  > Pickup (Health Piece)
+      Trivial
 
 > Pickup (Health Piece); Heals? False
   * Layers: default
   * Pickup 5; Category? Minor
+  > Door to Mirror Room
+      Trivial
 
 ----------------
 Dream Breaker Exit
 > Door to Dream Breaker Room (Front); Heals? False
   * Layers: default
   * Breakable Wall to Dream Breaker Room/Door to Dream Breaker Exit (Front)
+  > Door to Dream Breaker Room (Back)
+      Trivial
 
 > Door to Dream Breaker Room (Back); Heals? False
   * Layers: default
   * Breakable Wall to Dream Breaker Room/Door to Dream Breaker Exit (Back)
+  > Door to Dream Breaker Room (Front)
+      Trivial
 
 ----------------
 Dream Breaker Room
 > Door to Dream Breaker Access; Heals? False
   * Layers: default
   * No Wall to Dream Breaker Access/Door to Dream Breaker Room
+  > Door to Dream Breaker Exit (Front)
+      Trivial
+  > Pickup (Dream Breaker)
+      Trivial
 
 > Door to Dream Breaker Exit (Front); Heals? False
   * Layers: default
   * Breakable Wall to Dream Breaker Exit/Door to Dream Breaker Room (Front)
+  > Door to Dream Breaker Access
+      Trivial
 
 > Door to Dream Breaker Exit (Back); Heals? False
   * Layers: default
   * Breakable Wall to Dream Breaker Exit/Door to Dream Breaker Room (Back)
+  > Pickup (Dream Breaker)
+      Trivial
 
 > Pickup (Dream Breaker); Heals? False
   * Layers: default
   * Pickup 2; Category? Major
+  > Door to Dream Breaker Exit (Back)
+      Trivial
 
 ----------------
 Dream Breaker Save Room
@@ -148,6 +198,8 @@ Mirror Room
   * Extra - z: -332.85
   > Door to Dream Breaker Access
       Trivial
+  > Pickup (Sol Sister)
+      Trivial
 
 > Door to Dream Breaker Access; Heals? False
   * Layers: default
@@ -158,12 +210,16 @@ Mirror Room
 > Pickup (Sol Sister); Heals? False
   * Layers: default
   * Pickup 6; Category? Minor
+  > Starting Point
+      Trivial
 
 ----------------
 Path to Castle Sansa
 > Door to Prison Save Room; Heals? False
   * Layers: default
   * Small Key Door to Prison Save Room/Door to Path to Castle Sansa
+  > Door to Dream Breaker Access
+      Trivial
 
 > Door to Dream Breaker Access; Heals? False
   * Layers: default
@@ -180,10 +236,16 @@ Path to Twilight Theatre Access
 > Door to Dark Parkour Room; Heals? False
   * Layers: default
   * Breakable Wall to Dark Parkour Room/Door to Path to Twilight Theatre Access
+  > Door to Path to Twilight Theatre
+      All of the following:
+          Ascendant Light
+          Knowledge (Beginner) or Simple Height Gain
 
 > Door to Path to Twilight Theatre; Heals? False
   * Layers: default
   * No Wall to Path to Twilight Theatre/Door to Path to Twilight Theatre Access
+  > Door to Dark Parkour Room
+      Ascendant Light
 
 ----------------
 Path to Underbelly
@@ -196,122 +258,231 @@ Path to Underbelly Access
 > Door to Dark Hub; Heals? False
   * Layers: default
   * No Wall to Dark Hub/Door to Path to Underbelly Access
+  > Door to Path to Underbelly
+      Ascendant Light
 
 > Door to Path to Underbelly; Heals? False
   * Layers: default
   * No Wall to Path to Underbelly/Door to Path to Underbelly Access
+  > Door to Dark Hub
+      Ascendant Light
 
 ----------------
 Prison
 > Door to Prison Access; Heals? False
   * Layers: default
   * No Wall to Prison Access/Door to Prison
+  > Door to Prison Challenge
+      Trivial
+  > Door to Prison Save Room
+      Trivial
+  > Pickup (Small Key)
+      Trivial
 
 > Door to Prison Challenge; Heals? False
   * Layers: default
   * No Wall to Prison Challenge/Door to Prison
+  > Door to Prison Access
+      Trivial
 
 > Door to Prison Save Room; Heals? False
   * Layers: default
   * No Wall to Prison Save Room/Door to Prison
+  > Door to Prison Access
+      Trivial
 
 > Pickup (Small Key); Heals? False
   * Layers: default
   * Pickup 4; Category? Major
+  > Door to Prison Access
+      Trivial
 
 ----------------
 Prison Challenge
 > Door to Prison; Heals? False
   * Layers: default
   * No Wall to Prison/Door to Prison Challenge
+  > Before Challenge
+      Simple Height Gain
 
 > Pickup (Health Piece); Heals? False
   * Layers: default
   * Pickup 0; Category? Minor
+  > Event - Prison Challenge Lever
+      Dream Breaker and Simple Height Gain
+  > Before Challenge
+      Any of the following:
+          Cling Gem
+          Sun Greaves and After Prison Challenge Lever
+
+> Event - Prison Challenge Lever; Heals? False
+  * Layers: default
+  * Event Prison Challenge Lever
+  > Pickup (Health Piece)
+      Trivial
+
+> Before Challenge; Heals? False
+  * Layers: default
+  > Door to Prison
+      Trivial
+  > Pickup (Health Piece)
+      Cling Gem
 
 ----------------
 Prison Access
 > Tunnel to Slide Save Room; Heals? False
   * Layers: default
   * Slide Tunnel to Slide Save Room/Tunnel to Prison Access
+  > Door to Prison
+      Trivial
 
 > Door to Prison; Heals? False
   * Layers: default
   * No Wall to Prison/Door to Prison Access
+  > Tunnel to Slide Save Room
+      Trivial
 
 ----------------
 Prison Save Room
 > Door to Prison; Heals? False
   * Layers: default
   * No Wall to Prison/Door to Prison Save Room
+  > Save Crystal
+      Trivial
 
 > Door to Strong Eyes Arena; Heals? False
   * Layers: default
   * No Wall to Strong Eyes Arena/Door to Prison Save Room
+  > Save Crystal
+      Trivial
 
 > Door to Path to Castle Sansa; Heals? False
   * Layers: default
   * Small Key Door to Path to Castle Sansa/Door to Prison Save Room
+  > Save Crystal
+      Trivial
+
+> Save Crystal; Heals? True
+  * Layers: default
+  > Door to Prison
+      After Prison Save Room Lever
+  > Door to Strong Eyes Arena
+      Trivial
+  > Door to Path to Castle Sansa
+      Trivial
+  > Event - Prison Save Room Lever
+      Dream Breaker
+
+> Event - Prison Save Room Lever; Heals? False
+  * Layers: default
+  * Event Prison Save Room Lever
+  > Save Crystal
+      Trivial
 
 ----------------
 Slide Access
 > Door to Slide Save Room; Heals? False
   * Layers: default
   * No Wall to Slide Save Room/Door to Slide Access
+  > Door to Slide Room
+      Trivial
+  > Tunnel to Slide Exit
+      Trivial
 
 > Door to Slide Room; Heals? False
   * Layers: default
   * No Wall to Slide Room/Door to Slide Access
+  > Door to Slide Save Room
+      Trivial
 
 > Tunnel to Slide Exit; Heals? False
   * Layers: default
   * Slide Tunnel to Slide Exit/Tunnel to Slide Access
+  > Door to Slide Save Room
+      Trivial
 
 ----------------
 Slide Exit
 > Tunnel to Slide Room; Heals? False
   * Layers: default
   * Slide Tunnel to Slide Room/Tunnel to Slide Exit
+  > Tunnel to Slide Access
+      Slide
 
 > Tunnel to Slide Access; Heals? False
   * Layers: default
   * Slide Tunnel to Slide Access/Tunnel to Slide Exit
+  > Tunnel to Slide Room
+      Slide
 
 ----------------
 Slide Room
 > Door to Slide Access; Heals? False
   * Layers: default
   * No Wall to Slide Access/Door to Slide Room
+  > Pickup (Slide)
+      Trivial
 
 > Tunnel to Slide Exit; Heals? False
   * Layers: default
   * Slide Tunnel to Slide Exit/Tunnel to Slide Room
+  > Pickup (Slide)
+      Trivial
 
 > Pickup (Slide); Heals? False
   * Layers: default
   * Pickup 3; Category? Major
+  > Tunnel to Slide Exit
+      Trivial
 
 ----------------
 Slide Save Room
-> Door to Dark Labyrinth Access; Heals? False
+> Door to Dark Labyrinth Access; Heals? True
   * Layers: default
   * No Wall to Dark Labyrinth Access/Door to Slide Save Room
+  > Save Crystal
+      Trivial
 
 > Door to Slide Access; Heals? False
   * Layers: default
   * No Wall to Slide Access/Door to Slide Save Room
+  > Save Crystal
+      Trivial
 
 > Tunnel to Prison Access; Heals? False
   * Layers: default
   * Slide Tunnel to Prison Access/Tunnel to Slide Save Room
+  > Save Crystal
+      Trivial
+
+> Save Crystal; Heals? False
+  * Layers: default
+  > Door to Dark Labyrinth Access
+      Trivial
+  > Door to Slide Access
+      Trivial
+  > Tunnel to Prison Access
+      Trivial
 
 ----------------
 Strong Eyes Arena
 > Door to Prison Save Room; Heals? False
   * Layers: default
   * No Wall to Prison Save Room/Door to Strong Eyes Arena
+  > Pickup (Small Key)
+      After Strong Eyes
+  > Event - Strong Eyes
+      Can do damage
 
 > Pickup (Small Key); Heals? False
   * Layers: default
   * Pickup 1; Category? Major
+  > Door to Prison Save Room
+      Trivial
+
+> Event - Strong Eyes; Heals? False
+  * Layers: default
+  * Event Strong Eyes
+  > Door to Prison Save Room
+      Trivial
 
