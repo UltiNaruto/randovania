@@ -149,7 +149,7 @@ Dream Breaker Room
   * No Wall to Dream Breaker Access/Door to Dream Breaker Room
   > Door to Dream Breaker Exit (Front)
       Trivial
-  > Pickup (Dream Breaker)
+  > Next to Pickup
       Trivial
 
 > Door to Dream Breaker Exit (Front); Heals? False
@@ -161,13 +161,20 @@ Dream Breaker Room
 > Door to Dream Breaker Exit (Back); Heals? False
   * Layers: default
   * Breakable Wall to Dream Breaker Exit/Door to Dream Breaker Room (Back)
-  > Pickup (Dream Breaker)
+  > Next to Pickup
       Trivial
 
 > Pickup (Dream Breaker); Heals? False
   * Layers: default
   * Pickup 2; Category? Major
+  > Next to Pickup
+      Trivial
+
+> Next to Pickup; Heals? False
+  * Layers: default
   > Door to Dream Breaker Exit (Back)
+      Trivial
+  > Pickup (Dream Breaker)
       Trivial
 
 ----------------
