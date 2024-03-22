@@ -174,7 +174,7 @@ Dream Breaker Room
 Dream Breaker Save Room
 > Door to Dream Breaker Access; Heals? False
   * Layers: default
-  * No Wall to Dream Breaker Access/Door to Dream Breaker Save Room
+  * Breakable Wall to Dream Breaker Access/Door to Dream Breaker Save Room
   > Save Crystal
       Trivial
 
