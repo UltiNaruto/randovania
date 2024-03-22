@@ -901,7 +901,7 @@
                         "area": "Dream Breaker Access",
                         "node": "Door to Dream Breaker Save Room"
                     },
-                    "default_dock_weakness": "No Wall",
+                    "default_dock_weakness": "Breakable Wall",
                     "exclude_from_dock_rando": false,
                     "incompatible_dock_weaknesses": [],
                     "override_default_open_requirement": null,
