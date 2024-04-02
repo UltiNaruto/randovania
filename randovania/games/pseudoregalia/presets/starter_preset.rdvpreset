@@ -69,7 +69,7 @@
                     "num_shuffled_pickups": 1
                 },
                 "Empathy": {
-                    "num_shuffled_pickups": 2
+                    "num_shuffled_pickups": 1
                 },
                 "Memento": {
                     "num_included_in_starting_pickups": 1
@@ -78,31 +78,34 @@
                     "num_shuffled_pickups": 1
                 },
                 "Sol Sister": {
-                    "num_shuffled_pickups": 1
+                    "num_included_in_starting_pickups": 1
                 },
                 "Professional": {
-                    "num_shuffled_pickups": 1
+                    "num_included_in_starting_pickups": 1
                 },
                 "Sleepytime": {
-                    "num_shuffled_pickups": 1
+                    "num_included_in_starting_pickups": 1
                 },
                 "Guardian": {
-                    "num_shuffled_pickups": 1
+                    "num_included_in_starting_pickups": 1
                 },
                 "Soldier": {
-                    "num_shuffled_pickups": 1
+                    "num_included_in_starting_pickups": 1
                 },
                 "XIX": {
-                    "num_shuffled_pickups": 1
+                    "num_included_in_starting_pickups": 1
                 },
                 "Classy": {
-                    "num_shuffled_pickups": 1
+                    "num_included_in_starting_pickups": 1
                 },
                 "Bleeding Heart": {
-                    "num_shuffled_pickups": 1
+                    "num_included_in_starting_pickups": 1
                 },
                 "Health Piece": {
                     "num_shuffled_pickups": 15
+                },
+                "Small Key": {
+                    "num_shuffled_pickups": 7
                 }
             },
             "default_pickups": {},
@@ -111,7 +114,7 @@
         },
         "ammo_pickup_configuration": {
             "pickups_state": {
-                "Air Kick": {
+                "Heliacal Power": {
                     "ammo_count": [
                         1
                     ],
@@ -136,7 +139,7 @@
                         "Strikebreak Wall"
                     ],
                     "can_change_to": [
-                        "Breakabale Wall",
+                        "Breakable Wall",
                         "Strikebreak Wall",
                         "No Wall"
                     ]
