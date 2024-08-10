@@ -4,6 +4,7 @@ from typing import TYPE_CHECKING
 
 from randovania.games import game
 from randovania.games.planets_zebeth import layout
+from randovania.games.planets_zebeth.gui.planets_zebeth_teleporter_details_tab import PlanetsZebethTeleporterDetailsTab
 
 if TYPE_CHECKING:
     from randovania.games.planets_zebeth.exporter.game_exporter import PlanetsZebethGameExporter
@@ -26,7 +27,7 @@ def _gui() -> game.GameGui:
         cosmetic_dialog=gui.PlanetsZebethCosmeticPatchesDialog,
         export_dialog=gui.PlanetsZebethGameExportDialog,
         progressive_item_gui_tuples=(),
-        spoiler_visualizer=(),
+        spoiler_visualizer=(PlanetsZebethTeleporterDetailsTab,),
     )
 
 

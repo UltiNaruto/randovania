@@ -6,8 +6,9 @@ from randovania.bitpacking.bitpacking import BitPackDataclass
 from randovania.bitpacking.json_dataclass import JsonDataclass
 from randovania.games.game import RandovaniaGame
 from randovania.layout.base.base_configuration import BaseConfiguration
+from randovania.layout.lib.teleporters import TeleporterConfiguration
 
-# TODO: add door rando and elevator rando
+# TODO: add door rando
 
 
 @dataclasses.dataclass(frozen=True)
@@ -21,6 +22,7 @@ class PlanetsZebethConfiguration(BaseConfiguration):
     artifacts: PlanetsZebethArtifactConfig
     energy_per_tank: int = dataclasses.field(metadata={"min": 1, "max": 1000, "precision": 1})
     include_extra_pickups: bool
+    teleporters: TeleporterConfiguration
 
     @classmethod
     def game_enum(cls) -> RandovaniaGame:

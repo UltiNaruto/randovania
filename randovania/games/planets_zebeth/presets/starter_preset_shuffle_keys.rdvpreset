@@ -109,6 +109,27 @@
         "artifacts": {
             "vanilla_tourian_keys": false,
             "required_artifacts": 9
+        },
+        "teleporters": {
+            "mode": "vanilla",
+            "excluded_teleporters": [
+                {
+                    "region": "Tourian",
+                    "area": "Escape Route",
+                    "node": "Teleporter to Escape Route"
+                },
+                {
+                    "region": "Tourian",
+                    "area": "Tourian Entrance",
+                    "node": "Teleporter to Brinstar"
+                },
+                {
+                    "region": "Brinstar",
+                    "area": "Tourian Prelude",
+                    "node": "Teleporter to Tourian"
+                }
+            ],
+            "excluded_targets": []
         }
     }
 }

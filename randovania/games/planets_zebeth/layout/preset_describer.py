@@ -39,6 +39,13 @@ class PlanetsZebethPresetDescriber(GamePresetDescriber):
         template_strings = super().format_params(configuration)
 
         extra_message_tree = {
+            "Gameplay": [
+                {
+                    f"Elevators: {configuration.teleporters.description('elevators')}": (
+                        not configuration.teleporters.is_vanilla
+                    )
+                }
+            ],
             "Game Changes": [
                 message_for_required_mains(
                     configuration.ammo_pickup_configuration,
