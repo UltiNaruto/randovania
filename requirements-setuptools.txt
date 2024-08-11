@@ -28,7 +28,7 @@ packaging==24.1
     #   setuptools-scm
 pefile==2023.2.7
     # via pyinstaller
-pyinstaller==6.8.0
+pyinstaller==6.9.0
     # via -r tools/requirements/requirements-setuptools.in
 pyinstaller-hooks-contrib==2024.7
     # via
@@ -50,11 +50,11 @@ urllib3==2.2.2
     # via
     #   -c tools/requirements\../../requirements.txt
     #   dulwich
-wheel==0.43.0
+wheel==0.44.0
     # via -r tools/requirements/requirements-setuptools.in
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==70.1.0
+setuptools==70.3.0
     # via
     #   -c tools/requirements\../../requirements.txt
     #   -r tools/requirements/requirements-setuptools.in

@@ -368,7 +368,7 @@ jobs:
         run: python setup.py build_ui
 
       - name: Mypy on required files
-        uses: tsuyoshicho/action-mypy@v4
+        uses: tsuyoshicho/action-mypy@v5
         with:
           github_token: ${{ secrets.github_token }}
           # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
@@ -405,7 +405,7 @@ jobs:
         run: python setup.py build_ui
 
       - name: Mypy on modified files
-        uses: tsuyoshicho/action-mypy@v4
+        uses: tsuyoshicho/action-mypy@v5
         with:
           github_token: ${{ secrets.github_token }}
           # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
@@ -464,7 +464,7 @@ jobs:
 
       -
         name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3.3.0
+        uses: docker/setup-buildx-action@v3.6.1
 
       - name: Should Push
         id: decide_push
@@ -476,7 +476,7 @@ jobs:
       -
         name: Login to DockerHub
         if: ${{ fromJSON(steps.decide_push.outputs.should) }}
-        uses: docker/login-action@v3.2.0
+        uses: docker/login-action@v3.3.0
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -484,7 +484,7 @@ jobs:
       -
         name: Build and push
         id: docker_build
-        uses: docker/build-push-action@v6.1.0
+        uses: docker/build-push-action@v6.6.1
         with:
           context: .
           file: ./Dockerfile.server
@@ -527,7 +527,7 @@ jobs:
       - name: Download the executables
         uses: actions/download-artifact@v4.1.0
         with:
-          pattern: 'Randovania * *'
+          pattern: '* *'
           path: packages/
 
       - name: Install Python packages
@@ -563,7 +563,7 @@ jobs:
         if: ${{ startsWith(github.ref, 'refs/tags/v') }}
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: packages/**
+          file: packages/Randovania**
           file_glob: true
           tag: ${{ github.ref }}
           overwrite: true
@@ -633,7 +633,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with: 
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.WEBSITE_VERSION_UPDATER_PAT }}
           repository: randovania/randovania.github.io
           path: ./website
         
@@ -647,28 +647,29 @@ jobs:
         env: 
           TAG_NAME: ${{ github.ref }}
         run: |
-          # Tag is of format vX.Y.Z, cut the v off.
-          echo "NEW_VERSION=$(${TAG_NAME:1})" >> $GITHUB_OUTPUT
+          # Tag is of format refs/tags/vX.Y.Z, cut everything before X.Y.Z off.
+          echo "NEW_VERSION=${TAG_NAME:11}" >> $GITHUB_OUTPUT
 
       - name: Replace version, commit and push
         run: |
-          sed -i s/${{ steps.line.outputs.LINE_TO_REPLACE }}/randovania_version=${{ steps.new_version.outputs.NEW_VERSION }}/g ./website/ci.sh
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add ./website/ci.sh
+          cd website
+          sed -i s/${{ steps.line.outputs.LINE_TO_REPLACE }}/randovania_version=${{ steps.new_version.outputs.NEW_VERSION }}/g ./ci.sh
+          git config user.name Website-Version-Updater
+          git config user.email <>
+          git add ./ci.sh
           git commit -m "Update version to ${{ steps.new_version.outputs.NEW_VERSION }}"
           git push
 
   notify_failure:
     runs-on: ubuntu-latest
     needs: release
-    if: ${{ failure() }}
+    if: ${{ failure() && github.event_name != 'pull_request' && github.event_name != 'merge_group' }}
     steps:
       - name: Alert Failure
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ secrets.GENERAL_TALK_WEBHOOK }}
           nodetail: true
-          title: Release Job failed!
+          title: CI failed!
           description: |
-            [Release Job failed for `${{ github.ref_name }}`](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            [CI failed for `${{ github.ref_name }}`](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})

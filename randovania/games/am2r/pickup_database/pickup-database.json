@@ -126,7 +126,9 @@
             "pickup_category": "movement",
             "broad_category": "movement",
             "model_name": "sItemPowergrip",
-            "offworld_models": {},
+            "offworld_models": {
+                "samus_returns": "offworld_powergrip"
+            },
             "progression": [
                 "Power Grip"
             ],
@@ -231,7 +233,8 @@
             "offworld_models": {
                 "prime1": "Boost Ball",
                 "prime2": "BoostBall",
-                "dread": "powerup_speedbooster"
+                "dread": "powerup_speedbooster",
+                "samus_returns": "offworld_speedbooster"
             },
             "progression": [
                 "Speed Booster"
@@ -276,7 +279,11 @@
                 "Space Jump"
             ],
             "preferred_location_category": "major",
-            "expected_case_for_describer": "missing"
+            "expected_case_for_describer": "missing",
+            "original_locations": [
+                4,
+                6
+            ]
         },
         "Gravity Suit": {
             "pickup_category": "suit",
@@ -312,7 +319,11 @@
                 "Gravity Suit"
             ],
             "preferred_location_category": "major",
-            "expected_case_for_describer": "missing"
+            "expected_case_for_describer": "missing",
+            "original_locations": [
+                5,
+                9
+            ]
         },
         "Charge Beam": {
             "pickup_category": "beam",
@@ -507,7 +518,9 @@
             "pickup_category": "misc",
             "broad_category": "beam_related",
             "model_name": "sItemLongBeam",
-            "offworld_models": {},
+            "offworld_models": {
+                "samus_returns": "offworld_beam"
+            },
             "progression": [
                 "Long Beam"
             ],

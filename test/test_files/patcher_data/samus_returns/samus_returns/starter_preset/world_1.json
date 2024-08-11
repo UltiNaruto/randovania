@@ -4235,8 +4235,9 @@
             "text": "The Space Pirates exploit the energy of any life-form powerful enough to conquer the entire galaxy.\n"
         }
     ],
+    "baby_metroid_hint": "A Baby's Cry can be heard echoing from|Area 2 Dam Interior.",
     "cosmetic_patches": {
-        "enable_room_name_display": "NEVER",
+        "enable_room_name_display": "ALWAYS",
         "camera_names_dict": {
             "s000_surface": {
                 "collision_camera_000": "Landing Site",
@@ -4553,7 +4554,8 @@
                 "collision_camera_000": "Landing Site",
                 "collision_camera_017": "Transport to Area 8"
             }
-        }
+        },
+        "music_shuffle_dict": {}
     },
     "configuration_identifier": "XXXXXXXX",
     "custom_doors": [],
@@ -4563,5 +4565,8 @@
         "lava": 20
     },
     "layout_uuid": "00000000-0000-1111-0000-000000000000",
-    "enable_remote_lua": false
+    "enable_remote_lua": false,
+    "_randovania_meta": {
+        "layout_was_user_modified": true
+    }
 }

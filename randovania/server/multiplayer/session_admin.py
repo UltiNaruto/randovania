@@ -4,6 +4,7 @@ import uuid
 import peewee
 
 import randovania
+from randovania import monitoring
 from randovania.interface_common.players_configuration import PlayersConfiguration
 from randovania.layout.layout_description import InvalidLayoutDescription, LayoutDescription
 from randovania.layout.versioned_preset import VersionedPreset
@@ -99,6 +100,14 @@ def _get_preset(preset_bytes: bytes) -> VersionedPreset:
         raise error.InvalidActionError(f"invalid preset: {e}")
 
 
+def _verify_preset_allowed_for(preset: VersionedPreset, session: MultiplayerSession) -> None:
+    if preset.game not in session.allowed_games:
+        raise error.InvalidActionError(f"{preset.game.long_name} not allowed.")
+
+    if not randovania.is_dev_version() and preset.get_preset().configuration.unsupported_features():
+        raise error.InvalidActionError("Preset uses unsupported features.")
+
+
 def _create_world(
     sa: ServerApp, session: MultiplayerSession, name: str, preset_bytes: bytes, for_user: int | None = None
 ):
@@ -108,8 +117,7 @@ def _create_world(
     _verify_not_in_generation(session)
     preset = _get_preset(preset_bytes)
 
-    if preset.game not in session.allowed_games:
-        raise error.InvalidActionError(f"{preset.game.long_name} not allowed.")
+    _verify_preset_allowed_for(preset, session)
 
     if WORLD_NAME_RE.match(name) is None:
         raise error.InvalidActionError("Invalid world name")
@@ -134,11 +142,7 @@ def _change_world(sa: ServerApp, session: MultiplayerSession, world_uid: uuid.UU
     _verify_world_has_session(world, session)
     verify_has_admin_or_claimed(sa, world)
 
-    if preset.game not in session.allowed_games:
-        raise error.InvalidActionError(f"{preset.game.long_name} not allowed.")
-
-    if not randovania.is_dev_version() and preset.get_preset().configuration.unsupported_features():
-        raise error.InvalidActionError("Preset uses unsupported features.")
+    _verify_preset_allowed_for(preset, session)
 
     try:
         with database.db.atomic():
@@ -370,6 +374,8 @@ def _get_permalink(sa: ServerApp, session: MultiplayerSession) -> str:
 
 
 def admin_session(sa: ServerApp, session_id: int, action: str, *args):
+    monitoring.set_tag("action", action)
+
     action: SessionAdminGlobalAction = SessionAdminGlobalAction(action)
     session: database.MultiplayerSession = database.MultiplayerSession.get_by_id(session_id)
 
@@ -570,6 +576,8 @@ def _create_patcher_file(sa: ServerApp, session: MultiplayerSession, world_uid: 
 
 
 def admin_player(sa: ServerApp, session_id: int, user_id: int, action: str, *args):
+    monitoring.set_tag("action", action)
+
     verify_has_admin(sa, session_id, user_id)
     action: SessionAdminUserAction = SessionAdminUserAction(action)
 

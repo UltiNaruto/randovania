@@ -8,6 +8,7 @@ from randovania.games.am2r.layout.am2r_teleporters import AM2RTeleporterConfigur
 from randovania.games.am2r.layout.hint_configuration import HintConfiguration
 from randovania.games.game import RandovaniaGame
 from randovania.layout.base.base_configuration import BaseConfiguration
+from randovania.layout.base.dock_rando_configuration import DockRandoMode
 
 
 @dataclasses.dataclass(frozen=True)
@@ -22,6 +23,8 @@ class AM2RArtifactConfig(BitPackDataclass, JsonDataclass):
 @dataclasses.dataclass(frozen=True)
 class AM2RConfiguration(BaseConfiguration):
     energy_per_tank: int = dataclasses.field(metadata={"min": 1, "max": 1000, "precision": 1})
+    first_suit_dr: int = dataclasses.field(metadata={"min": 0, "max": 100, "precision": 1})
+    second_suit_dr: int = dataclasses.field(metadata={"min": 0, "max": 100, "precision": 1})
     softlock_prevention_blocks: bool
     septogg_helpers: bool
     teleporters: AM2RTeleporterConfiguration
@@ -41,6 +44,8 @@ class AM2RConfiguration(BaseConfiguration):
     force_blue_labs: bool
 
     # Chaos options
+    vertically_flip_gameplay: bool
+    horizontally_flip_gameplay: bool
     # div 1000 to get coefficient, div 10 to get %
     darkness_chance: int = dataclasses.field(metadata={"min": 0, "max": 1000})
     darkness_min: int = dataclasses.field(metadata={"min": 0, "max": 4})
@@ -51,6 +56,24 @@ class AM2RConfiguration(BaseConfiguration):
     @classmethod
     def game_enum(cls) -> RandovaniaGame:
         return RandovaniaGame.AM2R
+
+    def dangerous_settings(self) -> list[str]:
+        result = super().dangerous_settings()
+
+        if self.submerged_water_chance > 0 or self.submerged_lava_chance > 0:
+            result.append("Submerged Rooms")
+
+        if self.darkness_chance > 0:
+            result.append("Darkened Rooms")
+
+        if self.dock_rando.mode == DockRandoMode.WEAKNESSES:
+            weakness_database = self.dock_rando.weakness_database
+            for dock_type, state in self.dock_rando.types_state.items():
+                queen = weakness_database.get_by_weakness("door", "Queen Metroid-Locked Door")
+                if queen in state.can_change_to:
+                    result.append(f"{queen.long_name} is unsafe as a target in Door Lock Types")
+
+        return result
 
     def active_layers(self) -> set[str]:
         result = super().active_layers()
@@ -65,6 +88,9 @@ class AM2RConfiguration(BaseConfiguration):
 
         if self.artifacts.required_artifacts > self.artifacts.placed_artifacts:
             result.append("The amount of required DNA cannot be higher than the total amount of placed DNA.")
+
+        if self.horizontally_flip_gameplay or self.vertically_flip_gameplay:
+            result.append("Gameplay is flipped horizontally or vertically.")
 
         if self.darkness_min > self.darkness_max:
             result.append("The minimum darkness value cannot be higher than the maximum darkness value.")

@@ -96,6 +96,14 @@
                 "life support system"
             ],
             "hinted_as_major": false
+        },
+        "misc": {
+            "long_name": "Miscellaneous",
+            "hint_details": [
+                "a ",
+                "miscellaneous system"
+            ],
+            "hinted_as_major": false
         }
     },
     "standard_pickups": {
@@ -104,7 +112,7 @@
             "broad_category": "beam_related",
             "model_name": "Charge Beam",
             "offworld_models": {
-                "am2r": "sItemChargeBeam",
+                "am2r": "sItemChargeBeamPrime",
                 "dread": "powerup_chargebeam",
                 "prime2": "ChargeBeam INCOMPLETE",
                 "samus_returns": "powerup_chargebeam"
@@ -123,7 +131,8 @@
             "broad_category": "beam_related",
             "model_name": "Gamecube",
             "offworld_models": {
-                "am2r": "sItemPowerBeamPrime"
+                "am2r": "sItemPowerBeamPrime",
+                "samus_returns": "offworld_beam"
             },
             "progression": [
                 "Power"
@@ -188,7 +197,7 @@
             "model_name": "Missile",
             "offworld_models": {
                 "am2r": "sItemMissile",
-                "dread": "powerup_missile",
+                "dread": "item_missiletank",
                 "prime2": "MissileExpansionPrime1",
                 "samus_returns": "item_missiletank"
             },
@@ -307,7 +316,7 @@
             "broad_category": "life_support",
             "model_name": "Energy Tank",
             "offworld_models": {
-                "am2r": "sItemEnergyTank",
+                "am2r": "sItemEnergyTankPrime",
                 "dread": "item_energytank",
                 "prime2": "EnergyTank",
                 "samus_returns": "item_energytank"
@@ -363,7 +372,8 @@
             "offworld_models": {
                 "am2r": "sItemBoostBallPrime",
                 "dread": "powerup_speedbooster",
-                "prime2": "BoostBall"
+                "prime2": "BoostBall",
+                "samus_returns": "offworld_speedbooster"
             },
             "progression": [
                 "Boost"
@@ -475,7 +485,7 @@
                 "am2r": "sItemPhazonSuitPrime",
                 "dread": "powerup_variasuit",
                 "prime2": "VariaSuit INCOMPLETE",
-                "samus_returns": "powerup_gravitysuit"
+                "samus_returns": "offworld_suit"
             },
             "progression": [
                 "PhazonSuit"
@@ -510,7 +520,8 @@
             "broad_category": "beam_related",
             "model_name": "Wavebuster",
             "offworld_models": {
-                "am2r": "sItemWaveBusterPrime"
+                "am2r": "sItemWaveBusterPrime",
+                "samus_returns": "offworld_missile"
             },
             "progression": [
                 "Wavebuster"
@@ -526,7 +537,8 @@
             "broad_category": "beam_related",
             "model_name": "Ice Spreader",
             "offworld_models": {
-                "am2r": "sItemIceSpreaderPrime"
+                "am2r": "sItemIceSpreaderPrime",
+                "samus_returns": "offworld_missile"
             },
             "progression": [
                 "IceSpreader"
@@ -542,7 +554,8 @@
             "broad_category": "beam_related",
             "model_name": "Flamethrower",
             "offworld_models": {
-                "am2r": "sItemFlamethrowerPrime"
+                "am2r": "sItemFlamethrowerPrime",
+                "samus_returns": "offworld_missile"
             },
             "progression": [
                 "Flamethrower"
@@ -559,7 +572,7 @@
             "broad_category": "missile_related",
             "model_name": "Missile",
             "offworld_models": {
-                "am2r": "sItemMissile",
+                "am2r": "sItemMissileExpansionPrime",
                 "dread": "item_missiletank",
                 "prime2": "MissileExpansionPrime1",
                 "samus_returns": "item_missiletank"
@@ -588,6 +601,39 @@
             "unlocked_by": "MainPB",
             "temporary": "LockedPB",
             "allows_negative": true
+        },
+        "Energy Refill": {
+            "broad_category": "misc",
+            "model_name": "Health Refill",
+            "offworld_models": {},
+            "items": [
+                "HealthRefill"
+            ],
+            "preferred_location_category": "minor",
+            "allows_negative": false,
+            "description": "Refills your Energy by a set amount."
+        },
+        "Missile Refill": {
+            "broad_category": "misc",
+            "model_name": "Missile Refill",
+            "offworld_models": {},
+            "items": [
+                "MissileRefill"
+            ],
+            "preferred_location_category": "minor",
+            "allows_negative": false,
+            "description": "Refills your Missiles by a set amount."
+        },
+        "Power Bomb Refill": {
+            "broad_category": "misc",
+            "model_name": "Power Bomb Refill",
+            "offworld_models": {},
+            "items": [
+                "PBRefill"
+            ],
+            "preferred_location_category": "minor",
+            "allows_negative": false,
+            "description": "Refills your Power Bombs by a set amount."
         }
     },
     "default_pickups": {},

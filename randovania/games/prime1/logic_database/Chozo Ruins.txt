@@ -428,8 +428,10 @@ Extra - aabb: [-95.53676, -38.609608, -1.0693345, -22.250599, 43.303684, 30.2103
           Space Jump Boots and Standable Terrain (Beginner)
           # https://youtu.be/lkdoZR7aZ5s
           Scan Visor and Combat/Scan Dash (Advanced) and Standable Terrain (Advanced)
-          # https://youtu.be/lkdoZR7aZ5s?t=35
+          # NTSC ONLY NSJ https://youtu.be/lkdoZR7aZ5s?t=35
           L-Jump (Intermediate) and Standable Terrain (Advanced)
+          # Non-NTSC NSJ https://www.youtube.com/watch?v=2YM21Ql50P0
+          L-Jump (Intermediate) and Standable Terrain (Expert)
   > Pickup (Missile Expansion Half Pipe)
       All of the following:
           Morph Ball
@@ -1553,8 +1555,6 @@ Extra - aabb: [41.40501, 247.89255, -4.7951803, 128.55772, 339.1442, 14.098242]
           Space Jump Boots or After Chozo - Fallen Rubble
           Morph Ball Bomb and Morph Ball and Bomb Jump (Beginner)
           Scan Visor and Combat/Scan Dash (Beginner)
-  > Event - Hive Mecha
-      Trivial
   > Event - Fallen Rubble
       Trivial
 

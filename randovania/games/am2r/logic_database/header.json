@@ -427,6 +427,41 @@
                 "long_name": "Walljump Boots",
                 "max_capacity": 1,
                 "extra": {}
+            },
+            "Guardian": {
+                "long_name": "Guardian",
+                "max_capacity": 1,
+                "extra": {}
+            },
+            "Arachnus": {
+                "long_name": "Arachnus",
+                "max_capacity": 1,
+                "extra": {}
+            },
+            "Torizo": {
+                "long_name": "Torizo",
+                "max_capacity": 1,
+                "extra": {}
+            },
+            "Tester": {
+                "long_name": "Tester",
+                "max_capacity": 1,
+                "extra": {}
+            },
+            "Serris": {
+                "long_name": "Serris",
+                "max_capacity": 1,
+                "extra": {}
+            },
+            "Genesis": {
+                "long_name": "Genesis",
+                "max_capacity": 1,
+                "extra": {}
+            },
+            "Queen": {
+                "long_name": "Queen",
+                "max_capacity": 1,
+                "extra": {}
             }
         },
         "events": {
@@ -791,19 +826,19 @@
             "Combat": {
                 "long_name": "Combat",
                 "description": "If this trick is enabled, the player may be expected to defeat enemies and bosses with fewer items and less health.",
-                "require_documentation_above": 0,
+                "require_documentation_above": 3,
                 "extra": {}
             },
             "Walljump": {
                 "long_name": "Walljump",
                 "description": "If this trick is enabled, the player may be expected to get to places by chaining walljumps together.",
-                "require_documentation_above": 0,
+                "require_documentation_above": 1,
                 "extra": {}
             },
             "IBJ": {
                 "long_name": "Infinite Bomb Jumping",
                 "description": "If this trick is enabled, the player may be expected to reach higher places by placing bombs in a rhythm.",
-                "require_documentation_above": 0,
+                "require_documentation_above": 1,
                 "extra": {}
             },
             "MidAirMorph": {
@@ -833,7 +868,7 @@
             "Movement": {
                 "long_name": "Movement",
                 "description": "If this trick is enabled, the player may be expected to do some tricky platforming.",
-                "require_documentation_above": 0,
+                "require_documentation_above": 1,
                 "extra": {}
             },
             "ShortCharge": {

@@ -54,6 +54,17 @@ _AM2R_HINT_TEXT = {
 class AM2RPresetDescriber(GamePresetDescriber):
     def format_params(self, configuration: BaseConfiguration) -> dict[str, list[str]]:
         assert isinstance(configuration, AM2RConfiguration)
+
+        def describe_probability(probability: int, attribute: str) -> str | None:
+            if probability == 0:
+                return None
+
+            return f"{probability / 10:.1f}% chance of a room being {attribute}"
+
+        darkness_probability = describe_probability(configuration.darkness_chance, "dark")
+        submerged_water_probability = describe_probability(configuration.submerged_water_chance, "submerged in water")
+        submerged_lava_probability = describe_probability(configuration.submerged_lava_chance, "submerged in lava")
+
         template_strings = super().format_params(configuration)
 
         dna_hint = _AM2R_HINT_TEXT[configuration.hints.artifacts]
@@ -70,6 +81,8 @@ class AM2RPresetDescriber(GamePresetDescriber):
                     },
                 ),
                 {f"Energy per Tank: {configuration.energy_per_tank}": configuration.energy_per_tank != 100},
+                {f"First Suit Damage Reduction {configuration.first_suit_dr}%": configuration.first_suit_dr != 50},
+                {f"Second Suit Damage Reduction {configuration.second_suit_dr}%": configuration.second_suit_dr != 75},
                 {
                     f"Transport Pipes: {configuration.teleporters.description('transporters')}": (
                         not configuration.teleporters.is_vanilla
@@ -89,6 +102,13 @@ class AM2RPresetDescriber(GamePresetDescriber):
                     "Skip item cutscenes": configuration.skip_item_cutscenes,
                     "Enable Fusion Mode": configuration.fusion_mode,
                     "Open Missile Doors with Supers": configuration.supers_on_missile_doors,
+                },
+                {
+                    "Horizontally flipped gameplay": configuration.horizontally_flip_gameplay,
+                    "Vertically flipped gameplay": configuration.vertically_flip_gameplay,
+                    darkness_probability: darkness_probability is not None,
+                    submerged_water_probability: submerged_water_probability is not None,
+                    submerged_lava_probability: submerged_lava_probability is not None,
                 },
             ],
             "Goal": describe_artifacts(configuration.artifacts),
